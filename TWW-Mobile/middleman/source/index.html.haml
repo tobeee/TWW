@@ -1,0 +1,33 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0", name: "viewport"}/
+    %title The Written World
+
+    = stylesheet_link_tag 'all'
+    = javascript_include_tag 'all'
+
+    - if development?
+      = javascript_include_tag "mocks"
+    - else
+      = javascript_include_tag "https://trigger.io/catalyst/target/target-script-min.js#9CD35E12-C618-4F71-A599-33DE95B6762E"
+      :javascript
+        window.forge.enableDebug();
+      = javascript_include_tag "link"
+
+  %body
+    #tww-notifications{style: "display: none"}
+      %ul#tww-notifications-list.large-list
+    #tww-transition-buffer{style: "display: none"}
+    #tww-main
+
+    = jst_script_tags
+
+    :javascript
+      $(function() {
+        tww.start({
+          baseAjaxURL: 'http://www.playlablondon.com:4003',
+          fayeURL:     'http://www.playlablondon.com:4003/faye'
+        });
+      });

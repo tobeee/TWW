@@ -1,0 +1,26 @@
+=hero-details-dimensions($scale: 1)
+  .hero-details
+    .hero-avatar
+      :width round(image-width('hero-large.png') * $scale)
+      :height round(image-height('hero-large.png') * $scale)
+      :margin
+        :right round(25px * $scale)
+        :bottom round(20px * $scale)
+
+    .hero-description
+      :margin-top round(40px * $scale)
+
++hero-details-dimensions
+
++small-screen
+  +hero-details-dimensions(0.5)
+
+.hero-details
+  .hero-avatar
+    :float left
+
+  .hero-description
+    :margin
+      :left 5%
+      :right 5%
+    +clearfix

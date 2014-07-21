@@ -1,0 +1,14 @@
+:plain
+  <div class="section-header align-center">
+    What type of hero would you like to create?
+  </div>
+
+  <ul class="large-list">
+    <% _.each(archetypes, function(archetype) { %>
+      <li class="archetype" data-archetype-name="<%= archetype.name %>">
+        <i class="list-item-icon"></i>
+        <h2 class="archetype-name"><%= archetype.name %></h2>
+        <p class="archetype-description"><%= archetype.description %></p>
+      </li>
+    <% }); %>
+  </ul>

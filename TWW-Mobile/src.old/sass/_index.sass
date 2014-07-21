@@ -1,0 +1,103 @@
+$force-points-content-height: 364px
+
+=force-points-dimensions($scale: 1)
+  .force-points-content
+    :height round($force-points-content-height * $scale)
+    +background-size(100% round($force-points-content-height * $scale))
+
+  .force-points-content-left
+    :width round(300px * $scale)
+    :margin round(46px * $scale) auto 0 auto
+
+  .force-points-content-right
+    :padding-top round(60px * $scale)
+    :font-size round(23px * $scale)
+
+  .force-points-counter
+    :font-size round(120px * $scale)
+
+  .force-points-available
+    :border-top round(3px * $scale) solid $text-color
+    :font-size round(28px * $scale)
+    :padding-top round(7px * $scale)
+    :width round(255px * $scale)
+
+  .force-points-buy-more
+    :width round(258px * $scale)
+    :height round(69px * $scale)
+    :margin-top round(32px * $scale)
+    :font-size round(28px * $scale)
+
+    span:before
+      +text-shadow(rgba(black, 0.4) -1px -1px round(2px * $scale))
+
+.index
+  +force-points-dimensions
+
+  +small-screen
+    +force-points-dimensions(0.5)
+
+  .force-points-content
+    :position relative
+    :background-image image-url('force-points-bg.png')
+
+  .force-points-content-left-wrapper, .force-points-content-right
+    :position absolute
+    :top 0
+
+  .force-points-content-left-wrapper
+    :left 0
+    :width 49.3%
+    :padding-left 3%
+    +box-sizing(border-box)
+
+  .force-points-content-left
+    :text-align center
+
+  .force-points-content-right
+    :right 0
+    :width 50.7%
+    :font-weight 600
+    :padding-left 3%
+    :padding-right 6%
+    :line-height 1.33em
+    +box-sizing(border-box)
+
+  .force-points-counter
+    :font-weight bolder
+
+  .force-points-available
+    :font-family $gentium-book-basic
+    :font-style italic
+    :margin 0 auto
+
+  .force-points-buy-more
+    :display block
+    :margin
+      :left auto
+      :right auto
+    :background-image image-url('force-points-buy-more-button.png')
+    :border none
+    :font-family $open-sans
+    :font-weight bold
+    :color #959594
+    +border-radius(4px)
+    +box-shadow(rgba(black, 0.6) 0 1px 2px)
+    +background-size(cover)
+
+    span
+      :display inline-block
+      :margin 0 auto
+      :text-align left
+      :position relative
+
+      &:before
+        :position absolute
+        :width 200%
+        :content attr(title)
+        :left 1px
+        :top 1px
+        :color rgba(white, 0.4)
+
+      &:after
+        :content attr(title)

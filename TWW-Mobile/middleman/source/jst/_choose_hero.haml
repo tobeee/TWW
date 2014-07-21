@@ -1,0 +1,18 @@
+:plain
+  <header>
+    <h1 class="large-heading">Choose a Hero</h1>
+  </header>
+
+  <ul class="character-list hero-list tabular-list">
+    <% characters.each(function(c) { %>
+      <li class="hero tabular-list-row" data-hero-id="<%= c.id %>">
+        <i class="tabular-list-row-icon"></i>
+        <div class="tabular-list-row-content" title="Choose the Hero"><%= c.get('name') %></div>
+      </li>
+    <% }); %>
+  </ul>
+
+  <div class="create-new-hero">
+    <button class="button-small"><i class="icon-plus"></i></button>
+    Create a new Hero
+  </div>

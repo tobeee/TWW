@@ -1,0 +1,46 @@
+# file 'vendor/assets/javascripts/jquery.min.js', 'http://code.jquery.com/jquery-latest.min.js'
+# folder 'vendor/plugins/parallel_tests', 'https://github.com/grosser/parallel_tests.git'
+
+# Execute a block after updates
+# file 'vendor/assets/javascripts/jquery.js', 'http://code.jquery.com/jquery.js' do |path|
+#   puts "Do something useful with #{path}"
+#   rewrite(path) { |content| content.gsub(/\r\n/, \n).gsub /\t/, ' ' }
+# end
+
+# Checkout a specific :ref/:tag/:branch
+# folder 'vendor/plugins/parallel_tests', 'https://github.com/grosser/parallel_tests.git', :tag => 'v0.6.10'
+
+# DRY folders
+# folder 'vendor/assets/javascripts' do
+#   file 'jquery.js', 'http://code.jquery.com/jquery-latest.js'
+# end
+
+# Copy files & folders from repos (also works with private repos)
+# from 'https://github.com/grosser/parallel_tests.git' do
+#   file 'Readme.md'
+#   file 'target-folder/file.rb', 'lib/parallel_tests.rb'
+#   folder 'spec'
+#   folder 'renamed-folder', 'spec'
+# end
+
+folder 'vendor/js' do
+  file 'jquery.js', 'http://code.jquery.com/jquery-latest.js'
+  file 'backbone.js', 'http://backbonejs.org/backbone.js'
+  #file 'backbone-associations.js', 'http://dhruvaray.github.com/backbone-associations/backbone-associations.js'
+  # Use edge version of backbone-associations:
+  file 'backbone-associations.js', 'https://raw.github.com/dhruvaray/backbone-associations/master/backbone-associations.js'
+
+  from 'https://github.com/hongymagic/jQuery.serializeObject' do
+    file 'jquery.serializeObject.js'
+  end
+
+  from 'https://github.com/bestiejs/lodash' do
+    file 'lodash.js'
+  end
+
+  from 'https://github.com/azoff/Overscroll' do
+    file 'jquery.overscroll.js'
+  end
+end
+
+# vim: set filetype=ruby:

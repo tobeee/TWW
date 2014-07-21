@@ -1,0 +1,81 @@
+$tabular-list-row-height: 101px
+
+=tabular-list-dimensions($scale: 1)
+  ul.tabular-list
+    :margin
+      :left round(20px * $scale)
+      :right round(20px * $scale)
+      :top round(70px * $scale)
+      :bottom round(88px * $scale)
+
+    &:before
+      :left round(135px * $scale)
+      :top round(-20px * $scale)
+      :bottom round(-30px * $scale)
+      :border-right round(4px * $scale) solid #ABABAB
+
+    li.tabular-list-row
+      :padding
+        :left round(202px * $scale)
+        :top round(14px * $scale)
+      :height round($tabular-list-row-height * $scale)
+      :border
+        :top round(4px * $scale) solid $text-color
+        :bottom round(4px * $scale) solid $text-color
+      :margin-bottom round(76px * $scale)
+      :font-weight bold
+
+      &:last-child
+        :margin-bottom 0
+
+    .tabular-list-row-content
+      :font-size round(30px * $scale)
+
+      &:before
+        :font-size round(24px * $scale)
+
+    &.character-list
+      i.tabular-list-row-icon
+        :width round(image-width($hero-icon) * $scale)
+        :height round(image-height($hero-icon) * $scale)
+        :left round((70 - image-width($hero-icon) / 2) * $scale)
+        :top round(($tabular-list-row-height / 2 - image-height($hero-icon) / 2 - 8px) * $scale)
+
++tabular-list-dimensions
+
++small-screen
+  +tabular-list-dimensions(0.5)
+
+ul.tabular-list
+  :position relative
+  :z-index 1
+
+  &:before
+    :content ''
+    :position absolute
+    :display block
+    :z-index -1
+
+  li.tabular-list-row
+    :position relative
+    +box-sizing(border-box)
+
+  i.tabular-list-row-icon
+    :position absolute
+    +background-size(cover)
+
+  .tabular-list-row-content
+    :position relative
+    :z-index 1
+
+    &:before
+      :content attr(title) !important
+      :display block
+      :font-family $gentium-book-basic
+      :font-style italic
+      :font-weight normal
+      :margin-bottom 0.19em
+
+  &.character-list
+    i.tabular-list-row-icon
+      :background-image image-url($hero-icon)

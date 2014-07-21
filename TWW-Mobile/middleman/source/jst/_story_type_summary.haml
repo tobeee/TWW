@@ -1,0 +1,16 @@
+:plain
+  <header>
+    <h1>Stories of <%= type.name %></h1>
+    <h2>A guide for the Heroic</h2>
+  </header>
+
+  <div class="story-type-description">
+    <%= tww.h.simpleFormat(type.description) %>
+  </div>
+
+  <hr />
+  
+  <div class="story-chapter-one">
+    <h2>This story starts with&hellip;</h2>
+    <%= tww.h.simpleFormat(story.get('chapters')[0].desc) %>
+  </div>

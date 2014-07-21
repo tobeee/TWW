@@ -1,0 +1,28 @@
+# file 'vendor/assets/javascripts/jquery.min.js', 'http://code.jquery.com/jquery-latest.min.js'
+# folder 'vendor/plugins/parallel_tests', 'https://github.com/grosser/parallel_tests.git'
+
+# Execute a block after updates
+# file 'vendor/assets/javascripts/jquery.js', 'http://code.jquery.com/jquery.js' do |path|
+#   puts "Do something useful with #{path}"
+#   rewrite(path) { |content| content.gsub(/\r\n/, \n).gsub /\t/, ' ' }
+# end
+
+# Checkout a specific :ref/:tag/:branch
+# folder 'vendor/plugins/parallel_tests', 'https://github.com/grosser/parallel_tests.git', :tag => 'v0.6.10'
+
+# DRY folders
+# folder 'vendor/assets/javascripts' do
+#   file 'jquery.js', 'http://code.jquery.com/jquery-latest.js'
+# end
+
+folder 'js/vendor' do
+  file 'zepto.js', 'http://zeptojs.com/zepto.js'
+  file 'zepto.scroll.js', 'https://raw.github.com/suprMax/ZeptoScroll/master/static/zepto.scroll.js'
+  file 'underscore.js', 'http://underscorejs.org/underscore.js'
+  file 'underscore.string.js', 'https://raw.github.com/edtsech/underscore.string/master/lib/underscore.string.js'
+  file 'moment.js', 'https://raw.github.com/timrwood/moment/1.7.2/moment.js'
+
+  # Backbone is now included in the tww-shared submodule to ensure
+  # the same version across repos.
+  #file 'backbone.js', 'http://backbonejs.org/backbone.js'
+end

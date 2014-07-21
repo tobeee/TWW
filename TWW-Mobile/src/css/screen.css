@@ -1,0 +1,891 @@
+@font-face { font-family: "Open Sans"; src: url("../fonts/open-sans/OpenSans-Light-webfont.woff") format('woff'), url("../fonts/open-sans/OpenSans-Light-webfont.ttf") format('truetype'), url("../fonts/OpenSans-Light-webfont.svg#OpenSansLight") format('svg'); font-weight: 300; }
+
+@font-face { font-family: "Open Sans"; src: url("../fonts/open-sans/OpenSans-LightItalic-webfont.woff") format('woff'), url("../fonts/open-sans/OpenSans-LightItalic-webfont.ttf") format('truetype'), url("../fonts/OpenSans-LightItalic-webfont.svg#OpenSansLightItalic") format('svg'); font-weight: 300; font-style: italic; }
+
+@font-face { font-family: "Open Sans"; src: url("../fonts/open-sans/OpenSans-Regular-webfont.woff") format('woff'), url("../fonts/open-sans/OpenSans-Regular-webfont.ttf") format('truetype'), url("../fonts/OpenSans-Regular-webfont.svg#OpenSansRegular") format('svg'); font-weight: 400; }
+
+@font-face { font-family: "Open Sans"; src: url("../fonts/open-sans/OpenSans-Italic-webfont.woff") format('woff'), url("../fonts/open-sans/OpenSans-Italic-webfont.ttf") format('truetype'), url("../fonts/OpenSans-Italic-webfont.svg#OpenSansItalic") format('svg'); font-weight: 400; font-style: italic; }
+
+@font-face { font-family: "Open Sans"; src: url("../fonts/open-sans/OpenSans-Semibold-webfont.woff") format('woff'), url("../fonts/open-sans/OpenSans-Semibold-webfont.ttf") format('truetype'), url("../fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold") format('svg'); font-weight: 600; }
+
+@font-face { font-family: "Open Sans"; src: url("../fonts/open-sans/OpenSans-SemiboldItalic-webfont.woff") format('woff'), url("../fonts/open-sans/OpenSans-SemiboldItalic-webfont.ttf") format('truetype'), url("../fonts/OpenSans-SemiboldItalic-webfont.svg#OpenSansSemiboldItalic") format('svg'); font-weight: 600; font-style: italic; }
+
+@font-face { font-family: "Open Sans"; src: url("../fonts/open-sans/OpenSans-Bold-webfont.woff") format('woff'), url("../fonts/open-sans/OpenSans-Bold-webfont.ttf") format('truetype'), url("../fonts/OpenSans-Bold-webfont.svg#OpenSansBold") format('svg'); font-weight: 700; }
+
+@font-face { font-family: "Open Sans"; src: url("../fonts/open-sans/OpenSans-BoldItalic-webfont.woff") format('woff'), url("../fonts/open-sans/OpenSans-BoldItalic-webfont.ttf") format('truetype'), url("../fonts/OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic") format('svg'); font-weight: 700; font-style: italic; }
+
+@font-face { font-family: "Open Sans"; src: url("../fonts/open-sans/OpenSans-ExtraBold-webfont.woff") format('woff'), url("../fonts/open-sans/OpenSans-ExtraBold-webfont.ttf") format('truetype'), url("../fonts/OpenSans-ExtraBold-webfont.svg#OpenSansExtraBold") format('svg'); font-weight: 800; }
+
+@font-face { font-family: "Open Sans"; src: url("../fonts/open-sans/OpenSans-ExtraBoldItalic-webfont.woff") format('woff'), url("../fonts/open-sans/OpenSans-ExtraBoldItalic-webfont.ttf") format('truetype'), url("../fonts/OpenSans-ExtraBoldItalic-webfont.svg#OpenSansExtraBoldItalic") format('svg'); font-weight: 800; font-style: italic; }
+
+@font-face { font-family: "Open Sans"; src: url("../fonts/open-sans/OpenSans-ExtraBold-webfont.woff") format('woff'), url("../fonts/open-sans/OpenSans-ExtraBold-webfont.ttf") format('truetype'), url("../fonts/OpenSans-ExtraBold-webfont.svg#OpenSansExtraBold") format('svg'); font-weight: 800; }
+
+@font-face { font-family: "Open Sans"; src: url("../fonts/open-sans/OpenSans-ExtraBoldItalic-webfont.woff") format('woff'), url("../fonts/open-sans/OpenSans-ExtraBoldItalic-webfont.ttf") format('truetype'), url("../fonts/OpenSans-ExtraBoldItalic-webfont.svg#OpenSansExtraBoldItalic") format('svg'); font-weight: 800; font-style: italic; }
+
+@font-face { font-family: "Gentium Book Basic"; src: url("../fonts/gentium-book-basic/genbkbasr-webfont.woff") format('woff'), url("../fonts/gentium-book-basic/genbkbasr-webfont.ttf") format('truetype'), url("../fonts/gentium-book-basic/genbkbasr-webfont.svg") format('svg'); }
+
+@font-face { font-family: "Gentium Book Basic"; src: url("../fonts/gentium-book-basic/genbkbasi-webfont.woff") format('woff'), url("../fonts/gentium-book-basic/genbkbasi-webfont.ttf") format('truetype'), url("../fonts/gentium-book-basic/genbkbasi-webfont.svg") format('svg'); font-weight: bold; font-style: italic; }
+
+@font-face { font-family: "Gentium Book Basic"; src: url("../fonts/gentium-book-basic/genbkbasb-webfont.woff") format('woff'), url("../fonts/gentium-book-basic/genbkbasb-webfont.ttf") format('truetype'), url("../fonts/gentium-book-basic/genbkbasb-webfont.svg") format('svg'); }
+
+@font-face { font-family: "Gentium Book basbic"; src: url("../fonts/gentium-book-basbic/genbkbasbi-webfont.woff") format('woff'), url("../fonts/gentium-book-basbic/genbkbasbi-webfont.ttf") format('truetype'), url("../fonts/gentium-book-basbic/genbkbasbi-webfont.svg") format('svg'); font-weight: bold; font-style: italic; }
+
+/* line 17, /home/pilaf/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+/* line 22, /home/pilaf/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html { line-height: 1; }
+
+/* line 24, /home/pilaf/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul { list-style: none; }
+
+/* line 26, /home/pilaf/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* line 28, /home/pilaf/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+/* line 30, /home/pilaf/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote { quotes: none; }
+/* line 103, /home/pilaf/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+/* line 32, /home/pilaf/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img { border: none; }
+
+/* line 116, /home/pilaf/.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+/* line 11, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/screen.sass */
+body { color: #444444; font-family: "Open Sans", "Verdana", "Helvetica Neue", "Helvetica", "Arial", sans-serif; font-weight: 400; font-size: 24px; }
+
+/* line 17, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/screen.sass */
+a { text-decoration: none; }
+
+@media only screen and (max-width: 640px) { /* line 21, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/screen.sass */
+  body { font-size: 12px; } }
+/* line 1, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page_transitions.sass */
+#tww-transition-buffer { position: absolute; width: 100%; top: 0; z-index: 99999999; background: white; -webkit-box-shadow: rgba(0, 0, 0, 0.8) 5px 5px 100px; -moz-box-shadow: rgba(0, 0, 0, 0.8) 5px 5px 100px; box-shadow: rgba(0, 0, 0, 0.8) 5px 5px 100px; }
+
+/* line 5, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+.top-nav { height: 96px; }
+/* line 7, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+.top-nav a { height: 96px; }
+
+/* line 10, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+.bottom-nav { height: 96px; }
+/* line 13, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+.bottom-nav a { height: 96px; }
+
+/* line 16, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+body.with-top-nav { padding-top: 96px; }
+
+/* line 19, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+body.with-bottom-nav { padding-bottom: 96px; }
+
+@media only screen and (max-width: 640px) { /* line 5, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+  .top-nav { height: 48px; }
+  /* line 7, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+  .top-nav a { height: 48px; }
+  /* line 10, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+  .bottom-nav { height: 48px; }
+  /* line 13, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+  .bottom-nav a { height: 48px; }
+  /* line 16, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+  body.with-top-nav { padding-top: 48px; }
+  /* line 19, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+  body.with-bottom-nav { padding-bottom: 48px; } }
+/* line 27, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+.top-nav, .bottom-nav { position: fixed; display: table; table-layout: fixed; left: 0; right: 0; width: 100%; background: #f4c45f; z-index: 999999; }
+
+/* line 37, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+.top-nav { top: 0; }
+
+/* line 40, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+.bottom-nav { bottom: 0; }
+
+/* line 43, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+.nav-row { display: table-row; }
+/* line 46, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_nav.sass */
+.nav-row a { display: table-cell; text-align: center; vertical-align: middle; color: white; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 4px inset; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 4px inset; box-shadow: rgba(0, 0, 0, 0.5) 0 0 4px inset; }
+
+/* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_login.sass */
+#facebook-login-button { width: 496px; height: 86px; top: -10px; }
+
+@media only screen and (max-width: 640px) { /* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_login.sass */
+  #facebook-login-button { width: 248px; height: 43px; top: -5px; } }
+/* line 12, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_login.sass */
+.login-screen { padding-top: 0 !important; overflow: hidden; *zoom: 1; }
+
+/* line 16, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_login.sass */
+#facebook-login-button { display: block; position: relative; padding: 0; border: none; background: transparent url("../images/fb-button.png"); cursor: pointer; margin: 0 auto; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+/* line 13, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_section.sass */
+.section .section-header { height: 62px; font-size: 29px; padding-top: 20px; padding-left: 19px; -webkit-background-size: auto, auto 62px; -moz-background-size: auto, auto 62px; -o-background-size: auto, auto 62px; background-size: auto, auto 62px; }
+/* line 21, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_section.sass */
+.section .section-header-buttons { right: 11px; top: 6px; }
+/* line 25, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_section.sass */
+.section .section-header-buttons button.small-button { margin-left: 18px; }
+
+/* line 31, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_section.sass */
+.section .section-header { font-weight: 700; color: #444444; background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0))), url("../images/section-header-bg.png"); background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%), url("../images/section-header-bg.png"); background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%), url("../images/section-header-bg.png"); background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%), url("../images/section-header-bg.png"); background: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%), url("../images/section-header-bg.png"); -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px; box-shadow: rgba(0, 0, 0, 0.5) 0 1px 3px; overflow: hidden; *zoom: 1; }
+/* line 39, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_section.sass */
+.section .section-header.align-center { text-align: center; }
+/* line 42, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_section.sass */
+.section .section-header-buttons { position: absolute; }
+/* line 45, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_section.sass */
+.section .section-header-buttons button.small-button { float: right; display: block; }
+
+@media only screen and (max-width: 640px) { /* line 13, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_section.sass */
+  .section .section-header { height: 31px; font-size: 15px; padding-top: 10px; padding-left: 10px; -webkit-background-size: auto, auto 31px; -moz-background-size: auto, auto 31px; -o-background-size: auto, auto 31px; background-size: auto, auto 31px; }
+  /* line 21, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_section.sass */
+  .section .section-header-buttons { right: 6px; top: 3px; }
+  /* line 25, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_section.sass */
+  .section .section-header-buttons button.small-button { margin-left: 9px; } }
+/* line 9, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page { padding-right: 20px; padding-left: 20px; padding-top: 48px; padding-bottom: 50px; }
+/* line 16, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page.book-left { padding-left: 58px; background: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, rgba(0, 0, 0, 0))), url("../images/book-page-bottom-left-corner.png") left bottom no-repeat, url("../images/book-page-bottom-border.png") left bottom repeat-x, url("../images/book-page-left-border.png") left top repeat-y, url("../images/book-page-bg.png"); background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100px), url("../images/book-page-bottom-left-corner.png") left bottom no-repeat, url("../images/book-page-bottom-border.png") left bottom repeat-x, url("../images/book-page-left-border.png") left top repeat-y, url("../images/book-page-bg.png"); background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100px), url("../images/book-page-bottom-left-corner.png") left bottom no-repeat, url("../images/book-page-bottom-border.png") left bottom repeat-x, url("../images/book-page-left-border.png") left top repeat-y, url("../images/book-page-bg.png"); background: -o-linear-gradient(right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100px), url("../images/book-page-bottom-left-corner.png") left bottom no-repeat, url("../images/book-page-bottom-border.png") left bottom repeat-x, url("../images/book-page-left-border.png") left top repeat-y, url("../images/book-page-bg.png"); background: linear-gradient(right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100px), url("../images/book-page-bottom-left-corner.png") left bottom no-repeat, url("../images/book-page-bottom-border.png") left bottom repeat-x, url("../images/book-page-left-border.png") left top repeat-y, url("../images/book-page-bg.png"); -webkit-background-size: auto, 52px 15px, 1px 9px, 42px 1px, 148px 96px; -moz-background-size: auto, 52px 15px, 1px 9px, 42px 1px, 148px 96px; -o-background-size: auto, 52px 15px, 1px 9px, 42px 1px, 148px 96px; background-size: auto, 52px 15px, 1px 9px, 42px 1px, 148px 96px; }
+/* line 21, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page.book-right { padding-right: 58px; background: -webkit-gradient(linear, 0% 50%, 100 50%, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, rgba(0, 0, 0, 0))), url("../images/book-page-bottom-right-corner.png") right bottom no-repeat, url("../images/book-page-bottom-border.png") right bottom repeat-x, url("../images/book-page-right-border.png") right top repeat-y, url("../images/book-page-bg.png"); background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100px), url("../images/book-page-bottom-right-corner.png") right bottom no-repeat, url("../images/book-page-bottom-border.png") right bottom repeat-x, url("../images/book-page-right-border.png") right top repeat-y, url("../images/book-page-bg.png"); background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100px), url("../images/book-page-bottom-right-corner.png") right bottom no-repeat, url("../images/book-page-bottom-border.png") right bottom repeat-x, url("../images/book-page-right-border.png") right top repeat-y, url("../images/book-page-bg.png"); background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100px), url("../images/book-page-bottom-right-corner.png") right bottom no-repeat, url("../images/book-page-bottom-border.png") right bottom repeat-x, url("../images/book-page-right-border.png") right top repeat-y, url("../images/book-page-bg.png"); background: linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100px), url("../images/book-page-bottom-right-corner.png") right bottom no-repeat, url("../images/book-page-bottom-border.png") right bottom repeat-x, url("../images/book-page-right-border.png") right top repeat-y, url("../images/book-page-bg.png"); -webkit-background-size: auto, 52px 15px, 1px 9px, 42px 1px, 148px 96px; -moz-background-size: auto, 52px 15px, 1px 9px, 42px 1px, 148px 96px; -o-background-size: auto, 52px 15px, 1px 9px, 42px 1px, 148px 96px; background-size: auto, 52px 15px, 1px 9px, 42px 1px, 148px 96px; }
+/* line 26, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page .page-actions { margin-top: 88px; }
+/* line 29, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page h1 { font-size: 31px; }
+/* line 32, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page h1.large-heading { font-size: 36px; }
+/* line 35, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page h2 { font-size: 24px; }
+/* line 38, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page h3 { font-size: 22px; }
+/* line 42, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page header h1 { border-bottom: 4px solid #444444; }
+/* line 45, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page header h2 { font-size: 30px; }
+/* line 48, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page hr { height: 116px; line-height: 116px; font-size: 30px; }
+/* line 57, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page ul.bulleted-list li { font-size: 21px; }
+/* line 60, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page ul.bulleted-list li:before { left: 8px; }
+
+@media only screen and (max-width: 640px) { /* line 9, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+  .page { padding-right: 10px; padding-left: 10px; padding-top: 24px; padding-bottom: 25px; }
+  /* line 16, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+  .page.book-left { padding-left: 29px; background: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, rgba(0, 0, 0, 0))), url("../images/book-page-bottom-left-corner.png") left bottom no-repeat, url("../images/book-page-bottom-border.png") left bottom repeat-x, url("../images/book-page-left-border.png") left top repeat-y, url("../images/book-page-bg.png"); background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 50px), url("../images/book-page-bottom-left-corner.png") left bottom no-repeat, url("../images/book-page-bottom-border.png") left bottom repeat-x, url("../images/book-page-left-border.png") left top repeat-y, url("../images/book-page-bg.png"); background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 50px), url("../images/book-page-bottom-left-corner.png") left bottom no-repeat, url("../images/book-page-bottom-border.png") left bottom repeat-x, url("../images/book-page-left-border.png") left top repeat-y, url("../images/book-page-bg.png"); background: -o-linear-gradient(right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 50px), url("../images/book-page-bottom-left-corner.png") left bottom no-repeat, url("../images/book-page-bottom-border.png") left bottom repeat-x, url("../images/book-page-left-border.png") left top repeat-y, url("../images/book-page-bg.png"); background: linear-gradient(right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 50px), url("../images/book-page-bottom-left-corner.png") left bottom no-repeat, url("../images/book-page-bottom-border.png") left bottom repeat-x, url("../images/book-page-left-border.png") left top repeat-y, url("../images/book-page-bg.png"); -webkit-background-size: auto, 26px 8px, 1px 5px, 21px 1px, 74px 48px; -moz-background-size: auto, 26px 8px, 1px 5px, 21px 1px, 74px 48px; -o-background-size: auto, 26px 8px, 1px 5px, 21px 1px, 74px 48px; background-size: auto, 26px 8px, 1px 5px, 21px 1px, 74px 48px; }
+  /* line 21, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+  .page.book-right { padding-right: 29px; background: -webkit-gradient(linear, 0% 50%, 50 50%, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, rgba(0, 0, 0, 0))), url("../images/book-page-bottom-right-corner.png") right bottom no-repeat, url("../images/book-page-bottom-border.png") right bottom repeat-x, url("../images/book-page-right-border.png") right top repeat-y, url("../images/book-page-bg.png"); background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 50px), url("../images/book-page-bottom-right-corner.png") right bottom no-repeat, url("../images/book-page-bottom-border.png") right bottom repeat-x, url("../images/book-page-right-border.png") right top repeat-y, url("../images/book-page-bg.png"); background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 50px), url("../images/book-page-bottom-right-corner.png") right bottom no-repeat, url("../images/book-page-bottom-border.png") right bottom repeat-x, url("../images/book-page-right-border.png") right top repeat-y, url("../images/book-page-bg.png"); background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 50px), url("../images/book-page-bottom-right-corner.png") right bottom no-repeat, url("../images/book-page-bottom-border.png") right bottom repeat-x, url("../images/book-page-right-border.png") right top repeat-y, url("../images/book-page-bg.png"); background: linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 50px), url("../images/book-page-bottom-right-corner.png") right bottom no-repeat, url("../images/book-page-bottom-border.png") right bottom repeat-x, url("../images/book-page-right-border.png") right top repeat-y, url("../images/book-page-bg.png"); -webkit-background-size: auto, 26px 8px, 1px 5px, 21px 1px, 74px 48px; -moz-background-size: auto, 26px 8px, 1px 5px, 21px 1px, 74px 48px; -o-background-size: auto, 26px 8px, 1px 5px, 21px 1px, 74px 48px; background-size: auto, 26px 8px, 1px 5px, 21px 1px, 74px 48px; }
+  /* line 26, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+  .page .page-actions { margin-top: 44px; }
+  /* line 29, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+  .page h1 { font-size: 16px; }
+  /* line 32, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+  .page h1.large-heading { font-size: 18px; }
+  /* line 35, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+  .page h2 { font-size: 12px; }
+  /* line 38, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+  .page h3 { font-size: 11px; }
+  /* line 42, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+  .page header h1 { border-bottom: 2px solid #444444; }
+  /* line 45, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+  .page header h2 { font-size: 15px; }
+  /* line 48, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+  .page hr { height: 58px; line-height: 58px; font-size: 15px; }
+  /* line 57, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+  .page ul.bulleted-list li { font-size: 11px; }
+  /* line 60, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+  .page ul.bulleted-list li:before { left: 4px; } }
+/* line 69, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page.plain { background: white !important; }
+/* line 72, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page .page-actions { text-align: center; }
+/* line 75, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page h1, .page h2, .page h3 { font-weight: bold; text-align: center; margin-left: 5%; margin-right: 5%; }
+/* line 83, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page header h1 { padding-bottom: 0.13em; }
+/* line 86, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page header h2 { font-family: "Gentium Book Basic", "Georgia", "Times New Roman", serif; font-weight: normal; font-style: italic; margin-top: 0.2em; text-align: center; }
+/* line 93, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page hr { border: none; text-align: center; font-weight: bold; font-family: "Gentium Book Basic", "Georgia", "Times New Roman", serif; }
+/* line 99, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page hr:before { content: "\25CA\00A0\25CA\00A0\25CA"; }
+/* line 102, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page p { text-align: justify; margin-left: 5%; margin-right: 5%; margin-bottom: 1em; line-height: 1em; }
+/* line 111, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page ul.bulleted-list li { position: relative; margin-left: 5%; margin-right: 5%; font-family: "Gentium Book Basic", "Georgia", "Times New Roman", serif; font-style: italic; list-style: none; padding-left: 1.5em; }
+/* line 121, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_page.sass */
+.page ul.bulleted-list li:before { content: "-"; position: absolute; top: 0; }
+
+/* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_lists.sass */
+ul.large-list li { height: 182px; padding-top: 47px; padding-left: 226px; padding-right: 20px; -webkit-background-size: auto 182px; -moz-background-size: auto 182px; -o-background-size: auto 182px; background-size: auto 182px; }
+/* line 11, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_lists.sass */
+ul.large-list li i.list-item-icon { left: 72px; top: 47px; width: 80px; height: 80px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+/* line 18, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_lists.sass */
+ul.large-list h2 { font-size: 36px; }
+/* line 21, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_lists.sass */
+ul.large-list p { font-size: 28px; }
+@media only screen and (max-width: 640px) { /* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_lists.sass */
+  ul.large-list li { height: 91px; padding-top: 24px; padding-left: 113px; padding-right: 10px; -webkit-background-size: auto 91px; -moz-background-size: auto 91px; -o-background-size: auto 91px; background-size: auto 91px; }
+  /* line 11, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_lists.sass */
+  ul.large-list li i.list-item-icon { left: 36px; top: 24px; width: 40px; height: 40px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+  /* line 18, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_lists.sass */
+  ul.large-list h2 { font-size: 18px; }
+  /* line 21, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_lists.sass */
+  ul.large-list p { font-size: 14px; } }
+/* line 30, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_lists.sass */
+ul.large-list li { position: relative; display: block; background-image: url("../images/notification-bg.png"); background-color: white; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+/* line 38, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_lists.sass */
+ul.large-list li i.list-item-icon { position: absolute; }
+/* line 41, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_lists.sass */
+ul.large-list h2 { font-weight: bold; margin-bottom: 0.2em; }
+/* line 45, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_lists.sass */
+ul.large-list p { font-family: "Gentium Book Basic", "Georgia", "Times New Roman", serif; font-style: italic; }
+
+/* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list { margin-left: 20px; margin-right: 20px; margin-top: 70px; margin-bottom: 88px; }
+/* line 11, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list:before { left: 135px; top: -20px; bottom: -30px; border-right: 4px solid #ababab; }
+/* line 17, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list li.tabular-list-row { padding-left: 202px; padding-top: 14px; height: 101px; border-top: 4px solid #444444; border-bottom: 4px solid #444444; margin-bottom: 76px; font-weight: bold; }
+/* line 28, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list li.tabular-list-row:last-child { margin-bottom: 0; }
+/* line 31, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list .tabular-list-row-content { font-size: 30px; }
+/* line 34, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list .tabular-list-row-content:before { font-size: 24px; }
+/* line 38, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list.character-list i.tabular-list-row-icon { width: 91px; height: 158px; left: 25px; top: -37px; }
+
+@media only screen and (max-width: 640px) { /* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+  ul.tabular-list { margin-left: 10px; margin-right: 10px; margin-top: 35px; margin-bottom: 44px; }
+  /* line 11, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+  ul.tabular-list:before { left: 68px; top: -10px; bottom: -15px; border-right: 2px solid #ababab; }
+  /* line 17, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+  ul.tabular-list li.tabular-list-row { padding-left: 101px; padding-top: 7px; height: 51px; border-top: 2px solid #444444; border-bottom: 2px solid #444444; margin-bottom: 38px; font-weight: bold; }
+  /* line 28, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+  ul.tabular-list li.tabular-list-row:last-child { margin-bottom: 0; }
+  /* line 31, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+  ul.tabular-list .tabular-list-row-content { font-size: 15px; }
+  /* line 34, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+  ul.tabular-list .tabular-list-row-content:before { font-size: 12px; }
+  /* line 38, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+  ul.tabular-list.character-list i.tabular-list-row-icon { width: 46px; height: 79px; left: 12px; top: -18px; } }
+/* line 49, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list { position: relative; z-index: 1; }
+/* line 53, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list:before { content: ""; position: absolute; display: block; z-index: -1; }
+/* line 59, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list li.tabular-list-row { position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+/* line 63, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list i.tabular-list-row-icon { position: absolute; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+/* line 67, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list .tabular-list-row-content { position: relative; z-index: 1; }
+/* line 71, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list .tabular-list-row-content:before { content: attr(title) !important; display: block; font-family: "Gentium Book Basic", "Georgia", "Times New Roman", serif; font-style: italic; font-weight: normal; margin-bottom: 0.19em; }
+/* line 80, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_tabular_list.sass */
+ul.tabular-list.character-list i.tabular-list-row-icon { background-image: url("../images/hero.png"); }
+
+/* line 8, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_emboss.sass */
+.emboss, .button-large, .story-page .record-text { background: transparent; border: 1px solid rgba(220, 220, 220, 0.8); font-weight: bold; }
+/* line 13, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_emboss.sass */
+.emboss p, .button-large p, .story-page .record-text p { margin: 0; }
+
+/* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_emboss.sass */
+.emboss, .button-large, .story-page .record-text { font-size: 23px; padding: 15px 5%; -webkit-border-radius: 7px; -moz-border-radius: 7px; -ms-border-radius: 7px; -o-border-radius: 7px; border-radius: 7px; -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 inset, rgba(0, 0, 0, 0.05) 0 -1px 0 inset, rgba(0, 0, 0, 0.2) 0 1px 1px, rgba(0, 0, 0, 0.01) 0 0 0 5px; -moz-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 inset, rgba(0, 0, 0, 0.05) 0 -1px 0 inset, rgba(0, 0, 0, 0.2) 0 1px 1px, rgba(0, 0, 0, 0.01) 0 0 0 5px; box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 inset, rgba(0, 0, 0, 0.05) 0 -1px 0 inset, rgba(0, 0, 0, 0.2) 0 1px 1px, rgba(0, 0, 0, 0.01) 0 0 0 5px; }
+
+@media only screen and (max-width: 640px) { /* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_emboss.sass */
+  .emboss .emboss, .button-large .emboss, .story-page .record-text .emboss, .emboss .button-large, .button-large .button-large, .story-page .record-text .button-large, .emboss .story-page .record-text, .story-page .emboss .record-text, .button-large .story-page .record-text, .story-page .button-large .record-text, .story-page .record-text .record-text { font-size: 12px; padding: 8px 5%; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 inset, rgba(0, 0, 0, 0.05) 0 -1px 0 inset, rgba(0, 0, 0, 0.2) 0 1px 1px, rgba(0, 0, 0, 0.01) 0 0 0 3px; -moz-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 inset, rgba(0, 0, 0, 0.05) 0 -1px 0 inset, rgba(0, 0, 0, 0.2) 0 1px 1px, rgba(0, 0, 0, 0.01) 0 0 0 3px; box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 inset, rgba(0, 0, 0, 0.05) 0 -1px 0 inset, rgba(0, 0, 0, 0.2) 0 1px 1px, rgba(0, 0, 0, 0.01) 0 0 0 3px; } }
+/* line 27, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.book-button, button.button-small { -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 inset, rgba(0, 0, 0, 0.8) 0 2px 2px, rgba(0, 0, 0, 0.01) 0 0 0 5px; -moz-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 inset, rgba(0, 0, 0, 0.8) 0 2px 2px, rgba(0, 0, 0, 0.01) 0 0 0 5px; box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 inset, rgba(0, 0, 0, 0.8) 0 2px 2px, rgba(0, 0, 0, 0.01) 0 0 0 5px; }
+
+/* line 30, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.book-button { width: 258px; height: 69px; font-size: 28px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
+/* line 36, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.book-button span:before { text-shadow: rgba(0, 0, 0, 0.4) -1px -1px 2px; }
+
+/* line 39, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.button-large { min-height: 114px; margin-top: 56px; padding-top: 26px; padding-left: 48px; padding-right: 48px; padding-bottom: 26px; font-size: 29px; }
+/* line 49, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.button-large small { margin-bottom: 0.21em; font-size: 23px; }
+/* line 53, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.button-large.icon-left { padding-left: 270px; }
+/* line 56, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.button-large.icon-right { padding-right: 270px; }
+
+/* line 59, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+button.button-small { width: 50px; height: 49px; -webkit-background-size: 148px 96px; -moz-background-size: 148px 96px; -o-background-size: 148px 96px; background-size: 148px 96px; -webkit-border-radius: 8px; -moz-border-radius: 8px; -ms-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; }
+/* line 65, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+button.button-small i { top: 11px; left: 11px; width: 26px; height: 26px; }
+
+/* line 71, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+button.button-tiny { padding: 5px 35px; padding-top: 5px; font-size: 28px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 2px, rgba(0, 0, 0, 0.05) 3px 7px 5px inset; -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 2px, rgba(0, 0, 0, 0.05) 3px 7px 5px inset; box-shadow: rgba(0, 0, 0, 0.1) 0 2px 2px, rgba(0, 0, 0, 0.05) 3px 7px 5px inset; -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; }
+
+@media only screen and (max-width: 640px) { /* line 27, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+  .book-button, button.button-small { -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 inset, rgba(0, 0, 0, 0.8) 0 2px 2px, rgba(0, 0, 0, 0.01) 0 0 0 3px; -moz-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 inset, rgba(0, 0, 0, 0.8) 0 2px 2px, rgba(0, 0, 0, 0.01) 0 0 0 3px; box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0 inset, rgba(0, 0, 0, 0.8) 0 2px 2px, rgba(0, 0, 0, 0.01) 0 0 0 3px; }
+  /* line 30, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+  .book-button { width: 129px; height: 35px; font-size: 14px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
+  /* line 36, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+  .book-button span:before { text-shadow: rgba(0, 0, 0, 0.4) -1px -1px 1px; }
+  /* line 39, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+  .button-large { min-height: 57px; margin-top: 28px; padding-top: 13px; padding-left: 24px; padding-right: 24px; padding-bottom: 13px; font-size: 15px; }
+  /* line 49, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+  .button-large small { margin-bottom: 0.21em; font-size: 12px; }
+  /* line 53, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+  .button-large.icon-left { padding-left: 135px; }
+  /* line 56, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+  .button-large.icon-right { padding-right: 135px; }
+  /* line 59, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+  button.button-small { width: 25px; height: 25px; -webkit-background-size: 74px 48px; -moz-background-size: 74px 48px; -o-background-size: 74px 48px; background-size: 74px 48px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
+  /* line 65, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+  button.button-small i { top: 6px; left: 6px; width: 13px; height: 13px; }
+  /* line 71, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+  button.button-tiny { padding: 3px 18px; padding-top: 3px; font-size: 14px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px, rgba(0, 0, 0, 0.05) 2px 4px 3px inset; -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px, rgba(0, 0, 0, 0.05) 2px 4px 3px inset; box-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px, rgba(0, 0, 0, 0.05) 2px 4px 3px inset; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; } }
+/* line 83, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.book-button, button.button-small { position: relative; display: inline-block; border: 1px solid rgba(0, 0, 0, 0.3); background-image: url("../images/book-page-bg.png"); cursor: pointer; }
+
+/* line 90, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.book-button { font-family: "Open Sans", "Verdana", "Helvetica Neue", "Helvetica", "Arial", sans-serif; font-weight: bold; color: #949494; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+/* line 96, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.book-button span { display: inline-block; margin: 0 auto; text-align: left; position: relative; overflow: hidden; }
+/* line 103, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.book-button span:before { position: absolute !important; width: 200%; content: attr(title); left: 1px; top: 1px; color: rgba(255, 255, 255, 0.4); }
+/* line 111, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.book-button:disabled { background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(204, 204, 204, 0.5)), color-stop(100%, rgba(204, 204, 204, 0.5))), url("../images/book-page-bg.png"); background: -webkit-linear-gradient(rgba(204, 204, 204, 0.5), rgba(204, 204, 204, 0.5)), url("../images/book-page-bg.png"); background: -moz-linear-gradient(rgba(204, 204, 204, 0.5), rgba(204, 204, 204, 0.5)), url("../images/book-page-bg.png"); background: -o-linear-gradient(rgba(204, 204, 204, 0.5), rgba(204, 204, 204, 0.5)), url("../images/book-page-bg.png"); background: linear-gradient(rgba(204, 204, 204, 0.5), rgba(204, 204, 204, 0.5)), url("../images/book-page-bg.png"); -webkit-background-size: cover, cover; -moz-background-size: cover, cover; -o-background-size: cover, cover; background-size: cover, cover; color: rgba(148, 148, 148, 0.5); border: 1px solid rgba(0, 0, 0, 0.15); }
+
+/* line 117, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.button-large { position: relative; text-align: left; cursor: pointer; font-weight: bold; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+/* line 125, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.button-large small { display: block; font-family: "Gentium Book Basic", "Georgia", "Times New Roman", serif; font-weight: normal; font-style: italic; }
+/* line 131, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+.button-large i.icon { position: absolute; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+/* line 135, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+button.button-small { vertical-align: middle; }
+/* line 138, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+button.button-small i { position: absolute; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+/* line 142, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+button.button-small i.icon-plus { background-image: url("../images/bookshelf-add-icon.png"); }
+/* line 145, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+button.button-small i.icon-chevron-down { background-image: url("../images/bookshelf-expand-icon.png"); }
+
+/* line 148, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_buttons.sass */
+button.button-tiny { border: 1px solid #d2d2d2; background: #ececec; color: #888888; font-family: "Open Sans", "Verdana", "Helvetica Neue", "Helvetica", "Arial", sans-serif; text-shadow: #636363 0 -1px 0; }
+
+/* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_forms.sass */
+input.text-field, select { font-size: 24px; }
+
+/* line 5, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_forms.sass */
+input.text-field, textarea, select { padding: 15px 10px; }
+
+@media only screen and (max-width: 640px) { /* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_forms.sass */
+  input.text-field, select { font-size: 12px; }
+  /* line 5, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_forms.sass */
+  input.text-field, textarea, select { padding: 8px 5px; } }
+/* line 13, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_forms.sass */
+form { margin-top: 2em; }
+
+/* line 16, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_forms.sass */
+.form-field { margin-bottom: 4em; }
+
+/* line 19, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_forms.sass */
+.form-actions { text-align: right; }
+
+/* line 22, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_forms.sass */
+input, textarea, select { font-family: "Open Sans", "Verdana", "Helvetica Neue", "Helvetica", "Arial", sans-serif; color: #444444; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* line 28, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_forms.sass */
+input.text-field, textarea { border: 1px solid #9b9b9b; background: white; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px inset; -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px inset; box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px inset; }
+
+/* line 34, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_forms.sass */
+label { font-weight: bold; display: block; margin-bottom: 1.5em; }
+/* line 39, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_forms.sass */
+label.align-center { text-align: center; }
+
+/* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_book_cover.sass */
+.book-cover hr { height: 3px; margin: 20px 6px; }
+
+@media only screen and (max-width: 640px) { /* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_book_cover.sass */
+  .book-cover hr { height: 2px; margin: 10px 3px; } }
+/* line 12, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_book_cover.sass */
+.book-cover { color: #756541; background-color: #b18e3e; }
+/* line 16, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_book_cover.sass */
+.book-cover hr { background: #756541; border: none; border-bottom: 1px solid #ddce61; -webkit-box-shadow: #473d28 1px 1px 2px inset; -moz-box-shadow: #473d28 1px 1px 2px inset; box-shadow: #473d28 1px 1px 2px inset; }
+
+@-moz-keyframes rotate-bookshelf-expand-icon { /* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+  /* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  100% { -moz-transform: rotate(-180deg); transform: rotate(-180deg); } }
+
+@-webkit-keyframes rotate-bookshelf-expand-icon { /* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  /* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  100% { -webkit-transform: rotate(-180deg); transform: rotate(-180deg); } }
+
+@-o-keyframes rotate-bookshelf-expand-icon { /* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  0% { -o-transform: rotate(0deg); transform: rotate(0deg); }
+  /* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  100% { -o-transform: rotate(-180deg); transform: rotate(-180deg); } }
+
+@-ms-keyframes rotate-bookshelf-expand-icon { /* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
+  /* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  100% { -ms-transform: rotate(-180deg); transform: rotate(-180deg); } }
+
+@keyframes rotate-bookshelf-expand-icon { /* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  0% { transform: rotate(0deg); }
+  /* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  100% { transform: rotate(-180deg); } }
+
+/* line 27, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf .bookshelf-content { min-height: 295px; padding-top: 41px; padding-left: 35px; background: url("../images/bookshelf-t.png") left top repeat-x, url("../images/bookshelf-l.png") left 22px repeat-y, url("../images/bookshelf-r.png") right 22px repeat-y, url("../images/bookshelf-c.png") left 22px; -webkit-background-size: auto 22px, auto 273px, auto 273px, auto 273px; -moz-background-size: auto 22px, auto 273px, auto 273px, auto 273px; -o-background-size: auto 22px, auto 273px, auto 273px, auto 273px; background-size: auto 22px, auto 273px, auto 273px, auto 273px; }
+/* line 37, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf .bookshelf-content .book, .bookshelf .bookshelf-content .hero { width: 171px; margin-right: 28px; font-size: 23px; padding-left: 16px; padding-right: 16px; }
+/* line 45, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf .bookshelf-content .book { height: 226px; padding-top: 24px; }
+/* line 49, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf .bookshelf-content .hero { height: 232px; -webkit-background-size: 91px 158px; -moz-background-size: 91px 158px; -o-background-size: 91px 158px; background-size: 91px 158px; }
+
+/* line 55, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf { position: relative; }
+/* line 59, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf .bookshelf-header .bookshelf-header-buttons button.bookshelf-toggle i { -webkit-transition: background-image 0; -webkit-transition-delay: 0.2s; -moz-transition: background-image 0 0.2s; -o-transition: background-image 0 0.2s; transition: background-image 0 0.2s; -webkit-animation: rotate-bookshelf-expand-icon 0.2s; -moz-animation: rotate-bookshelf-expand-icon 0.2s; -ms-animation: rotate-bookshelf-expand-icon 0.2s; -o-animation: rotate-bookshelf-expand-icon 0.2s; animation: rotate-bookshelf-expand-icon 0.2s; }
+/* line 63, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf .bookshelf-content { position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; overflow: hidden; *zoom: 1; }
+/* line 68, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf .bookshelf-content .book, .bookshelf .bookshelf-content .hero { display: block; position: absolute; font-family: "Gentium Book Basic", "Georgia", "Times New Roman", serif; font-weight: normal; font-style: italic; text-align: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+/* line 77, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf .bookshelf-content .book { color: rgba(255, 255, 255, 0.8); -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 2px 3px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 2px 3px; box-shadow: rgba(0, 0, 0, 0.5) 0 2px 3px; text-shadow: rgba(0, 0, 0, 0.1) -1px -1px 1px, rgba(255, 255, 255, 0.2) 1px 1px 1px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+/* line 83, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf .bookshelf-content .book:nth-child(3n) { background-image: url("../images/book-blue.png"); }
+/* line 86, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf .bookshelf-content .book:nth-child(3n+1) { background-image: url("../images/book-yellow.png"); color: #957536; text-shadow: #ffe24e 0 1px 0; }
+/* line 91, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf .bookshelf-content .book:nth-child(3n+2) { background-image: url("../images/book-red.png"); }
+/* line 94, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf .bookshelf-content .hero { color: #666666; background: url("../images/hero.png") center bottom no-repeat; text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0; }
+/* line 100, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf.collapsed .bookshelf-content { height: 0; padding-top: 0; padding-bottom: 0; }
+/* line 107, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+.bookshelf.collapsed .bookshelf-header .bookshelf-toggle i { background-image: url("../images/bookshelf-close-icon.png") !important; -webkit-animation: rotate-bookshelf-expand-icon 0.2s; -moz-animation: rotate-bookshelf-expand-icon 0.2s; -ms-animation: rotate-bookshelf-expand-icon 0.2s; -o-animation: rotate-bookshelf-expand-icon 0.2s; animation: rotate-bookshelf-expand-icon 0.2s; }
+
+@media only screen and (max-width: 640px) { /* line 27, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  .bookshelf .bookshelf-content { min-height: 148px; padding-top: 21px; padding-left: 18px; background: url("../images/bookshelf-t.png") left top repeat-x, url("../images/bookshelf-l.png") left 11px repeat-y, url("../images/bookshelf-r.png") right 11px repeat-y, url("../images/bookshelf-c.png") left 11px; -webkit-background-size: auto 11px, auto 137px, auto 137px, auto 137px; -moz-background-size: auto 11px, auto 137px, auto 137px, auto 137px; -o-background-size: auto 11px, auto 137px, auto 137px, auto 137px; background-size: auto 11px, auto 137px, auto 137px, auto 137px; }
+  /* line 37, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  .bookshelf .bookshelf-content .book, .bookshelf .bookshelf-content .hero { width: 86px; margin-right: 14px; font-size: 12px; padding-left: 8px; padding-right: 8px; }
+  /* line 45, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  .bookshelf .bookshelf-content .book { height: 113px; padding-top: 12px; }
+  /* line 49, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_bookshelf.sass */
+  .bookshelf .bookshelf-content .hero { height: 116px; -webkit-background-size: 46px 79px; -moz-background-size: 46px 79px; -o-background-size: 46px 79px; background-size: 46px 79px; } }
+/* line 1, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_force_points.sass */
+.force-points-count { font-weight: bolder; }
+
+/* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_force_points.sass */
+.force-points-available { font-family: "Gentium Book Basic", "Georgia", "Times New Roman", serif; font-style: italic; }
+
+/* line 9, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_force_points.sass */
+.book-cover .force-points { overflow: hidden; *zoom: 1; }
+/* line 12, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_force_points.sass */
+.book-cover .force-points-counter { width: 55%; text-align: center; float: left; }
+/* line 17, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_force_points.sass */
+.book-cover .force-points-counter hr { margin: 0; }
+/* line 20, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_force_points.sass */
+.book-cover .force-points-count { display: inline-block; position: relative; text-shadow: #ddce61 0px 1px; }
+/* line 25, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_force_points.sass */
+.book-cover .force-points-count:before { content: attr(title); position: absolute; left: 1px; top: 1px; color: rgba(150, 129, 83, 0.5); text-shadow: rgba(84, 73, 47, 0.5) -1px -1px; }
+/* line 33, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_force_points.sass */
+.book-cover .force-points-available { color: #655738; text-shadow: #ddce61 0px 1px; }
+/* line 37, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_force_points.sass */
+.book-cover .force-points-buy-more { position: relative; float: right; width: 40%; text-align: center; font-weight: bold; color: #5a5343; background: #756541; text-shadow: #b89e66 0 1px, #373229 0 -1px 1px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+.index .force-points-content { height: 364px; -webkit-background-size: 100% 364px; -moz-background-size: 100% 364px; -o-background-size: 100% 364px; background-size: 100% 364px; }
+/* line 8, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+.index .force-points-content-left { width: 300px; margin: 46px auto 0 auto; }
+/* line 12, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+.index .force-points-content-right { padding-top: 60px; font-size: 23px; }
+/* line 16, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+.index .force-points-count { font-size: 120px; }
+/* line 19, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+.index .force-points-available { border-top: 3px solid #444444; font-size: 28px; padding-top: 7px; width: 255px; }
+/* line 25, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+.index .force-points-buy-more { width: 258px; height: 69px; margin-top: 32px; font-size: 28px; }
+/* line 31, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+.index .force-points-buy-more span:before { text-shadow: rgba(0, 0, 0, 0.4) -1px -1px 2px; }
+@media only screen and (max-width: 640px) { /* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+  .index .force-points-content { height: 182px; -webkit-background-size: 100% 182px; -moz-background-size: 100% 182px; -o-background-size: 100% 182px; background-size: 100% 182px; }
+  /* line 8, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+  .index .force-points-content-left { width: 150px; margin: 23px auto 0 auto; }
+  /* line 12, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+  .index .force-points-content-right { padding-top: 30px; font-size: 12px; }
+  /* line 16, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+  .index .force-points-count { font-size: 60px; }
+  /* line 19, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+  .index .force-points-available { border-top: 2px solid #444444; font-size: 14px; padding-top: 4px; width: 128px; }
+  /* line 25, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+  .index .force-points-buy-more { width: 129px; height: 35px; margin-top: 16px; font-size: 14px; }
+  /* line 31, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+  .index .force-points-buy-more span:before { text-shadow: rgba(0, 0, 0, 0.4) -1px -1px 1px; } }
+/* line 40, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+.index .force-points-content { position: relative; background-image: url("../images/force-points-bg.png"); }
+/* line 44, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+.index .force-points-content-left-wrapper, .index .force-points-content-right { position: absolute; top: 0; }
+/* line 48, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+.index .force-points-content-left-wrapper { left: 0; width: 49.3%; padding-left: 3%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+/* line 54, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+.index .force-points-content-left { text-align: center; }
+/* line 57, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+.index .force-points-content-right { right: 0; width: 50.7%; font-weight: 600; padding-left: 3%; padding-right: 6%; line-height: 1.33em; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+/* line 66, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_index.sass */
+.index .force-points-available { margin: 0 auto; }
+
+/* line 15, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_notifications.sass */
+#tww-notifications { z-index: 9999; position: fixed; left: 0; right: 0; width: 100%; top: 33px; -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px; -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px; box-shadow: rgba(0, 0, 0, 0.2) 0 0 20px; }
+/* line 7, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_notifications.sass */
+#tww-notifications:before { width: 50px; height: 50px; top: -22px; right: 50px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: white 10px 0, white 0 10px, rgba(0, 0, 0, 0.2) 0 0 20px; -moz-box-shadow: white 10px 0, white 0 10px, rgba(0, 0, 0, 0.2) 0 0 20px; box-shadow: white 10px 0, white 0 10px, rgba(0, 0, 0, 0.2) 0 0 20px; }
+@media only screen and (max-width: 640px) { /* line 15, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_notifications.sass */
+  #tww-notifications { top: 17px; -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px; -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px; box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px; }
+  /* line 7, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_notifications.sass */
+  #tww-notifications:before { width: 25px; height: 25px; top: -11px; right: 25px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; -webkit-box-shadow: white 5px 0, white 0 5px, rgba(0, 0, 0, 0.2) 0 0 10px; -moz-box-shadow: white 5px 0, white 0 5px, rgba(0, 0, 0, 0.2) 0 0 10px; box-shadow: white 5px 0, white 0 5px, rgba(0, 0, 0, 0.2) 0 0 10px; } }
+/* line 27, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_notifications.sass */
+#tww-notifications:before { content: ""; display: block; position: absolute; background: white; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
+/* line 36, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_notifications.sass */
+#tww-notifications .notification.notification-your-turn i.notification-icon { background-image: url("../images/story-icon.png"); }
+/* line 39, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_notifications.sass */
+#tww-notifications .notification.notification-accepted i.notification-icon { background-image: url("../images/user-icon.png"); }
+
+/* line 42, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_notifications.sass */
+#tww-notifications-list { overflow: auto; }
+
+/* line 5, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_details.sass */
+.story-details .story-god i.icon { width: 80px; height: 80px; left: 86px; top: 17px; }
+/* line 8, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_details.sass */
+.story-details .story-hero i.icon { width: 91px; height: 158px; right: 81px; top: -22px; }
+/* line 11, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_details.sass */
+.story-details .story-type i.icon { width: 133px; height: 172px; left: 60px; top: -29px; }
+
+@media only screen and (max-width: 640px) { /* line 5, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_details.sass */
+  .story-details .story-god i.icon { width: 40px; height: 40px; left: 43px; top: 9px; }
+  /* line 8, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_details.sass */
+  .story-details .story-hero i.icon { width: 46px; height: 79px; right: 40px; top: -11px; }
+  /* line 11, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_details.sass */
+  .story-details .story-type i.icon { width: 67px; height: 86px; left: 30px; top: -15px; } }
+/* line 20, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_details.sass */
+.story-details .story-god i.icon { background-image: url("../images/user-icon.png"); }
+/* line 23, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_details.sass */
+.story-details .story-hero i.icon { background-image: url("../images/hero.png"); }
+/* line 26, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_details.sass */
+.story-details .story-type i.icon { background-image: url("../images/vengeance-book.png"); }
+
+/* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_role_type_summary.sass */
+.role-type-summary .role-type-description { font-size: 25px; margin-top: 40px; }
+
+/* line 7, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_role_type_summary.sass */
+.character-list { margin-bottom: 150px; }
+
+@media only screen and (max-width: 640px) { /* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_role_type_summary.sass */
+  .role-type-summary .role-type-description { font-size: 13px; margin-top: 40px; }
+  /* line 7, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_role_type_summary.sass */
+  .character-list { margin-bottom: 75px; } }
+/* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_type_summary.sass */
+.story-type-summary .story-type-description { margin-top: 40px; }
+
+@media only screen and (max-width: 640px) { /* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_type_summary.sass */
+  .story-type-summary .story-type-description { margin-top: 20px; } }
+/* line 14, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_type_summary.sass */
+.story-type-summary .story-chapter-one h2 { text-align: left; margin-left: 5%; margin-right: 5%; margin-bottom: 0.5em; }
+
+/* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_hero_details.sass */
+.hero-details .hero-avatar { width: 162px; height: 345px; margin-right: 25px; margin-bottom: 20px; }
+/* line 10, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_hero_details.sass */
+.hero-details .hero-description { margin-top: 40px; }
+
+@media only screen and (max-width: 640px) { /* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_hero_details.sass */
+  .hero-details .hero-avatar { width: 81px; height: 173px; margin-right: 13px; margin-bottom: 10px; }
+  /* line 10, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_hero_details.sass */
+  .hero-details .hero-description { margin-top: 20px; } }
+/* line 19, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_hero_details.sass */
+.hero-details .hero-avatar { float: left; }
+/* line 22, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_hero_details.sass */
+.hero-details .hero-description { margin-left: 5%; margin-right: 5%; overflow: hidden; *zoom: 1; }
+
+/* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-main .character-edit-intro { margin-top: 55px; }
+/* line 5, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-main .character-new-or-edit { padding-top: 100px; }
+/* line 8, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-main .character-new-or-edit .character-new, .character-edit-main .character-new-or-edit .character-edit { padding-top: 290px; width: 185px; }
+
+/* line 13, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-body .character-body-type { height: 345px; }
+
+/* line 17, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-items .character-edit-items-preview { top: 96px; bottom: 96px; }
+/* line 21, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-items .force-points-container { padding: 0 22px; padding-bottom: 18px; }
+/* line 25, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-items .force-points-count { font-size: 70px; margin-top: 6px; margin-bottom: -2px; }
+/* line 31, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-items .force-points-buy-more { margin-top: 18px; height: 78px; padding-top: 22px; font-size: 17px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; -webkit-box-shadow: #ddce61 0 1px, #54492f 1px 2px 1px inset; -moz-box-shadow: #ddce61 0 1px, #54492f 1px 2px 1px inset; box-shadow: #ddce61 0 1px, #54492f 1px 2px 1px inset; }
+/* line 39, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-items .force-points-available { font-size: 17px; margin-top: 3px; }
+
+@media only screen and (max-width: 640px) { /* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+  .character-edit-main .character-edit-intro { margin-top: 28px; }
+  /* line 5, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+  .character-edit-main .character-new-or-edit { padding-top: 50px; }
+  /* line 8, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+  .character-edit-main .character-new-or-edit .character-new, .character-edit-main .character-new-or-edit .character-edit { padding-top: 145px; width: 93px; }
+  /* line 13, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+  .character-edit-body .character-body-type { height: 173px; }
+  /* line 17, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+  .character-edit-items .character-edit-items-preview { top: 48px; bottom: 48px; }
+  /* line 21, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+  .character-edit-items .force-points-container { padding: 0 11px; padding-bottom: 9px; }
+  /* line 25, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+  .character-edit-items .force-points-count { font-size: 35px; margin-top: 3px; margin-bottom: -1px; }
+  /* line 31, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+  .character-edit-items .force-points-buy-more { margin-top: 9px; height: 39px; padding-top: 11px; font-size: 9px; -webkit-border-radius: 1px; -moz-border-radius: 1px; -ms-border-radius: 1px; -o-border-radius: 1px; border-radius: 1px; -webkit-box-shadow: #ddce61 0 1px, #54492f 1px 1px 1px inset; -moz-box-shadow: #ddce61 0 1px, #54492f 1px 1px 1px inset; box-shadow: #ddce61 0 1px, #54492f 1px 1px 1px inset; }
+  /* line 39, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+  .character-edit-items .force-points-available { font-size: 9px; margin-top: 2px; } }
+/* line 49, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-main .character-new-or-edit { overflow: hidden; *zoom: 1; }
+/* line 52, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-main .character-new-or-edit .character-new, .character-edit-main .character-new-or-edit .character-edit { background: center top no-repeat; text-align: center; }
+/* line 56, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-main .character-new-or-edit .character-new { float: left; margin-left: 10%; background-image: url("../images/new-character.png"); }
+/* line 61, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-main .character-new-or-edit .character-edit { float: right; margin-right: 10%; background-image: url("../images/edit-character.png"); }
+
+/* line 67, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-body .character-body-types { overflow-x: auto; width: 100%; white-space: nowrap; text-align: center; }
+/* line 73, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-body .character-body-type { vertical-align: middle; -webkit-transform: scale(0.75, 0.75); -moz-transform: scale(0.75, 0.75); -ms-transform: scale(0.75, 0.75); -o-transform: scale(0.75, 0.75); transform: scale(0.75, 0.75); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; -webkit-transition: opacity 0.5s, -webkit-transform 0.5s; -moz-transition: opacity 0.5s, -moz-transform 0.5s; -o-transition: opacity 0.5s, -o-transform 0.5s; transition: opacity 0.5s, transform 0.5s; }
+/* line 79, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-body .character-body-type.-current { -webkit-transform: scale(1, 1); -moz-transform: scale(1, 1); -ms-transform: scale(1, 1); -o-transform: scale(1, 1); transform: scale(1, 1); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
+
+/* line 83, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-items { position: relative; padding-left: 50%; }
+/* line 87, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_character_editor.sass */
+.character-edit-items .character-edit-items-preview { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: fixed; left: 0; width: 50%; }
+
+/* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_choose_hero.sass */
+.create-new-hero { padding-top: 24px; padding-bottom: 20px; margin-left: 20px; margin-right: 20px; border-top: 4px solid #444444; border-bottom: 4px solid #444444; font-size: 29px; }
+/* line 15, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_choose_hero.sass */
+.create-new-hero button { margin-right: 80px; }
+
+@media only screen and (max-width: 640px) { /* line 2, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_choose_hero.sass */
+  .create-new-hero { padding-top: 12px; padding-bottom: 10px; margin-left: 10px; margin-right: 10px; border-top: 2px solid #444444; border-bottom: 2px solid #444444; font-size: 15px; }
+  /* line 15, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_choose_hero.sass */
+  .create-new-hero button { margin-right: 40px; } }
+/* line 23, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_choose_hero.sass */
+.create-new-hero { text-align: center; font-weight: bold; cursor: pointer; }
+
+/* line 29, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_choose_hero.sass */
+.hero-list .hero { cursor: pointer; }
+
+/* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_applied_to_join.sass */
+.applied-to-join .applied-to-join-story i.icon { width: 80px; height: 80px; left: 86px; top: 17px; }
+/* line 6, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_applied_to_join.sass */
+.applied-to-join .applied-to-join-hero i.icon { width: 91px; height: 158px; right: 81px; top: -22px; }
+/* line 9, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_applied_to_join.sass */
+.applied-to-join .applied-to-join-god i.icon { width: 80px; height: 80px; left: 86px; top: 17px; }
+
+@media only screen and (max-width: 640px) { /* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_applied_to_join.sass */
+  .applied-to-join .applied-to-join-story i.icon { width: 40px; height: 40px; left: 43px; top: 9px; }
+  /* line 6, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_applied_to_join.sass */
+  .applied-to-join .applied-to-join-hero i.icon { width: 46px; height: 79px; right: 40px; top: -11px; }
+  /* line 9, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_applied_to_join.sass */
+  .applied-to-join .applied-to-join-god i.icon { width: 40px; height: 40px; left: 43px; top: 9px; } }
+/* line 18, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_applied_to_join.sass */
+.applied-to-join .applied-to-join-story i.icon { background-image: url("../images/story-icon.png"); }
+/* line 21, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_applied_to_join.sass */
+.applied-to-join .applied-to-join-hero i.icon { background-image: url("../images/hero.png"); }
+/* line 24, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_applied_to_join.sass */
+.applied-to-join .applied-to-join-god i.icon { background-image: url("../images/user-icon.png"); }
+
+/* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter header { margin-bottom: 26px; }
+/* line 7, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-description { margin-bottom: 38px; }
+/* line 11, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .items-list li, .story-page .cast-list li, .story-page .objectives-list li { line-height: 26px; -webkit-background-size: auto 26px; -moz-background-size: auto 26px; -o-background-size: auto 26px; background-size: auto 26px; }
+/* line 16, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-location-description p { font-size: 21px; }
+/* line 19, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages { margin-top: 30px; }
+/* line 22, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .meta-text p { font-size: 22px; }
+/* line 26, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .encounter h3 { border-bottom: 4px solid #444444; font-size: 31px; margin-bottom: 10px; }
+/* line 31, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .encounter p { font-size: 21px; }
+/* line 34, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .performed-action, .story-page .chapter-messages .completed-objective { font-size: 22px; }
+/* line 37, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .performed-action .spent-force-points, .story-page .chapter-messages .completed-objective .gained-force-points { right: -35px; top: -10px; }
+/* line 41, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .performed-action .spent-force-points { font-size: 20px; font-family: "Open Sans", "Verdana", "Helvetica Neue", "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 20px; padding-top: 8px; padding-right: 8px; padding-left: 8px; padding-bottom: 10px; border: 2px solid white; font-style: normal; font-weight: 600; -moz-border-radius-topright: 20px 14px; -webkit-border-top-right-radius: 20px 14px; border-top-right-radius: 20px 14px; -moz-border-radius-bottomright: 20px 14px; -webkit-border-bottom-right-radius: 20px 14px; border-bottom-right-radius: 20px 14px; -moz-border-radius-topleft: 20px 14px; -webkit-border-top-left-radius: 20px 14px; border-top-left-radius: 20px 14px; -moz-border-radius-bottomleft: 20px 14px; -webkit-border-bottom-left-radius: 20px 14px; border-bottom-left-radius: 20px 14px; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px; box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d45c45), color-stop(100%, #af3224)); background: -webkit-linear-gradient(#d45c45, #af3224); background: -moz-linear-gradient(#d45c45, #af3224); background: -o-linear-gradient(#d45c45, #af3224); background: linear-gradient(#d45c45, #af3224); color: white; }
+/* line 44, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .completed-objective .gained-force-points { font-size: 20px; font-family: "Open Sans", "Verdana", "Helvetica Neue", "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 20px; padding-top: 8px; padding-right: 8px; padding-left: 8px; padding-bottom: 10px; border: 2px solid white; font-style: normal; font-weight: 600; -moz-border-radius-topright: 20px 14px; -webkit-border-top-right-radius: 20px 14px; border-top-right-radius: 20px 14px; -moz-border-radius-bottomright: 20px 14px; -webkit-border-bottom-right-radius: 20px 14px; border-bottom-right-radius: 20px 14px; -moz-border-radius-topleft: 20px 14px; -webkit-border-top-left-radius: 20px 14px; border-top-left-radius: 20px 14px; -moz-border-radius-bottomleft: 20px 14px; -webkit-border-bottom-left-radius: 20px 14px; border-bottom-left-radius: 20px 14px; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px; box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffda59), color-stop(100%, #ffb830)); background: -webkit-linear-gradient(#ffda59, #ffb830); background: -moz-linear-gradient(#ffda59, #ffb830); background: -o-linear-gradient(#ffda59, #ffb830); background: linear-gradient(#ffda59, #ffb830); color: #444444; }
+
+@media only screen and (max-width: 640px) { /* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+  .story-page .chapter header { margin-bottom: 13px; }
+  /* line 7, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+  .story-page .chapter-description { margin-bottom: 19px; }
+  /* line 11, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+  .story-page .items-list li, .story-page .cast-list li, .story-page .objectives-list li { line-height: 13px; -webkit-background-size: auto 13px; -moz-background-size: auto 13px; -o-background-size: auto 13px; background-size: auto 13px; }
+  /* line 16, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+  .story-page .chapter-location-description p { font-size: 11px; }
+  /* line 19, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+  .story-page .chapter-messages { margin-top: 15px; }
+  /* line 22, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+  .story-page .chapter-messages .meta-text p { font-size: 11px; }
+  /* line 26, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+  .story-page .chapter-messages .encounter h3 { border-bottom: 2px solid #444444; font-size: 16px; margin-bottom: 5px; }
+  /* line 31, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+  .story-page .chapter-messages .encounter p { font-size: 11px; }
+  /* line 34, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+  .story-page .chapter-messages .performed-action, .story-page .chapter-messages .completed-objective { font-size: 11px; }
+  /* line 37, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+  .story-page .chapter-messages .performed-action .spent-force-points, .story-page .chapter-messages .completed-objective .gained-force-points { right: -18px; top: -5px; }
+  /* line 41, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+  .story-page .chapter-messages .performed-action .spent-force-points { font-size: 10px; font-family: "Open Sans", "Verdana", "Helvetica Neue", "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 10px; padding-top: 4px; padding-right: 4px; padding-left: 4px; padding-bottom: 5px; border: 1px solid white; font-style: normal; font-weight: 600; -moz-border-radius-topright: 10px 7px; -webkit-border-top-right-radius: 10px 7px; border-top-right-radius: 10px 7px; -moz-border-radius-bottomright: 10px 7px; -webkit-border-bottom-right-radius: 10px 7px; border-bottom-right-radius: 10px 7px; -moz-border-radius-topleft: 10px 7px; -webkit-border-top-left-radius: 10px 7px; border-top-left-radius: 10px 7px; -moz-border-radius-bottomleft: 10px 7px; -webkit-border-bottom-left-radius: 10px 7px; border-bottom-left-radius: 10px 7px; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px; box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d45c45), color-stop(100%, #af3224)); background: -webkit-linear-gradient(#d45c45, #af3224); background: -moz-linear-gradient(#d45c45, #af3224); background: -o-linear-gradient(#d45c45, #af3224); background: linear-gradient(#d45c45, #af3224); color: white; }
+  /* line 44, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+  .story-page .chapter-messages .completed-objective .gained-force-points { font-size: 10px; font-family: "Open Sans", "Verdana", "Helvetica Neue", "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 10px; padding-top: 4px; padding-right: 4px; padding-left: 4px; padding-bottom: 5px; border: 1px solid white; font-style: normal; font-weight: 600; -moz-border-radius-topright: 10px 7px; -webkit-border-top-right-radius: 10px 7px; border-top-right-radius: 10px 7px; -moz-border-radius-bottomright: 10px 7px; -webkit-border-bottom-right-radius: 10px 7px; border-bottom-right-radius: 10px 7px; -moz-border-radius-topleft: 10px 7px; -webkit-border-top-left-radius: 10px 7px; border-top-left-radius: 10px 7px; -moz-border-radius-bottomleft: 10px 7px; -webkit-border-bottom-left-radius: 10px 7px; border-bottom-left-radius: 10px 7px; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px; box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffda59), color-stop(100%, #ffb830)); background: -webkit-linear-gradient(#ffda59, #ffb830); background: -moz-linear-gradient(#ffda59, #ffb830); background: -o-linear-gradient(#ffda59, #ffb830); background: linear-gradient(#ffda59, #ffb830); color: #444444; } }
+/* line 57, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-location-description h3 { text-align: left; }
+/* line 60, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-location-description p { font-family: "Gentium Book Basic", "Georgia", "Times New Roman", serif; font-style: italic; }
+/* line 64, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-location-exits, .story-page .items-list, .story-page .cast-list, .story-page .objectives-list { margin-bottom: 1em; }
+/* line 68, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .items-list li, .story-page .cast-list li, .story-page .objectives-list li { margin-bottom: 0.15em; background-position: left top; background-repeat: no-repeat; }
+/* line 74, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .items-list li:before, .story-page .cast-list li:before, .story-page .objectives-list li:before { content: "" !important; }
+/* line 78, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .items-list li { background-image: url("../images/item-bullet.png"); }
+/* line 82, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .cast-list li { background-image: url("../images/user-bullet.png"); }
+/* line 86, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .objectives-list li { background-image: url("../images/objective-bullet.png"); }
+/* line 90, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .record-text { margin-bottom: 1em; }
+/* line 94, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .meta-text h3 { text-align: left; }
+/* line 98, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .encounter h3 { padding-bottom: 0.13em; }
+/* line 101, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .encounter p { font-family: "Gentium Book Basic", "Georgia", "Times New Roman", serif; font-style: italic; }
+/* line 105, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .performed-action, .story-page .chapter-messages .completed-objective { position: relative; font-style: italic; margin-left: 5%; margin-bottom: 1em; }
+/* line 111, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .performed-action .spent-force-points, .story-page .chapter-messages .completed-objective .gained-force-points { position: absolute; }
+/* line 114, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .performed-action { color: #bf4330; }
+/* line 117, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .performed-action .spent-force-points:before { content: "-"; }
+/* line 120, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .completed-objective { color: #ddab37; }
+/* line 123, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_page.sass */
+.story-page .chapter-messages .completed-objective .gained-force-points:before { content: "+"; }
+
+/* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu { padding-left: 128px; padding-top: 20px; -webkit-background-size: 130px 1px; -moz-background-size: 130px 1px; -o-background-size: 130px 1px; background-size: 130px 1px; }
+/* line 9, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu h2 { font-size: 28px; padding: 0 40px; margin-bottom: 14px; }
+/* line 14, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu h2:before { left: 41px; }
+/* line 17, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .force-points { padding-left: 40px; padding-right: 30px; }
+/* line 21, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .force-points-count { font-size: 120px; margin-bottom: -5px; }
+/* line 25, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .force-points-buy-more { margin-top: 18px; height: 134px; padding-top: 39px; font-size: 29px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: #ddce61 0 1px, #54492f 1px 2px 1px inset; -moz-box-shadow: #ddce61 0 1px, #54492f 1px 2px 1px inset; box-shadow: #ddce61 0 1px, #54492f 1px 2px 1px inset; }
+/* line 33, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .force-points-available { font-size: 30px; margin-top: 5px; }
+/* line 37, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .items-list li, .story-writing-menu .objectives-list li { font-size: 23px; }
+/* line 42, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .objectives .objectives-list li.objective { padding-left: 40px; height: 52px; line-height: 52px; }
+/* line 48, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .objectives .objectives-list li.objective.current { height: 74px; line-height: 74px; -webkit-box-shadow: #ddce61 0 1px, #54492f 1px 2px 1px inset; -moz-box-shadow: #ddce61 0 1px, #54492f 1px 2px 1px inset; box-shadow: #ddce61 0 1px, #54492f 1px 2px 1px inset; }
+/* line 53, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .objectives .objectives-list li.objective.current .objective-force-points { font-size: 33px; padding-top: 10px; padding-bottom: 9px; padding-left: 12px; padding-right: 12px; top: 17px; border: none; text-shadow: #b89e66 0 1px, #373229 0 -2px; }
+/* line 64, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .objectives .objectives-list li.objective .objective-force-points { font-size: 20px; font-family: "Open Sans", "Verdana", "Helvetica Neue", "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 20px; padding-top: 8px; padding-right: 8px; padding-left: 8px; padding-bottom: 10px; border: 2px solid white; font-style: normal; font-weight: 600; -moz-border-radius-topright: 20px 14px; -webkit-border-top-right-radius: 20px 14px; border-top-right-radius: 20px 14px; -moz-border-radius-bottomright: 20px 14px; -webkit-border-bottom-right-radius: 20px 14px; border-bottom-right-radius: 20px 14px; -moz-border-radius-topleft: 20px 14px; -webkit-border-top-left-radius: 20px 14px; border-top-left-radius: 20px 14px; -moz-border-radius-bottomleft: 20px 14px; -webkit-border-bottom-left-radius: 20px 14px; border-bottom-left-radius: 20px 14px; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px; box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffda59), color-stop(100%, #ffb830)); background: -webkit-linear-gradient(#ffda59, #ffb830); background: -moz-linear-gradient(#ffda59, #ffb830); background: -o-linear-gradient(#ffda59, #ffb830); background: linear-gradient(#ffda59, #ffb830); color: #444444; font-size: 19px; padding-top: 8px; padding-bottom: 7px; padding-right: 7px; padding-left: 7px; right: 30px; top: 6px; }
+/* line 77, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .inventory .items-list li.item { min-height: 29px; line-height: 29px; padding-left: 75px; background-position: 40px top; margin: 8px 0; -webkit-background-size: auto 29px; -moz-background-size: auto 29px; -o-background-size: auto 29px; background-size: auto 29px; }
+
+@media only screen and (max-width: 640px) { /* line 4, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+  .story-writing-menu { padding-left: 64px; padding-top: 10px; -webkit-background-size: 65px 1px; -moz-background-size: 65px 1px; -o-background-size: 65px 1px; background-size: 65px 1px; }
+  /* line 9, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+  .story-writing-menu h2 { font-size: 14px; padding: 0 20px; margin-bottom: 7px; }
+  /* line 14, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+  .story-writing-menu h2:before { left: 21px; }
+  /* line 17, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+  .story-writing-menu .force-points { padding-left: 20px; padding-right: 15px; }
+  /* line 21, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+  .story-writing-menu .force-points-count { font-size: 60px; margin-bottom: -3px; }
+  /* line 25, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+  .story-writing-menu .force-points-buy-more { margin-top: 9px; height: 67px; padding-top: 20px; font-size: 15px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; -webkit-box-shadow: #ddce61 0 1px, #54492f 1px 1px 1px inset; -moz-box-shadow: #ddce61 0 1px, #54492f 1px 1px 1px inset; box-shadow: #ddce61 0 1px, #54492f 1px 1px 1px inset; }
+  /* line 33, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+  .story-writing-menu .force-points-available { font-size: 15px; margin-top: 3px; }
+  /* line 37, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+  .story-writing-menu .items-list li, .story-writing-menu .objectives-list li { font-size: 12px; }
+  /* line 42, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+  .story-writing-menu .objectives .objectives-list li.objective { padding-left: 20px; height: 26px; line-height: 26px; }
+  /* line 48, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+  .story-writing-menu .objectives .objectives-list li.objective.current { height: 37px; line-height: 37px; -webkit-box-shadow: #ddce61 0 1px, #54492f 1px 1px 1px inset; -moz-box-shadow: #ddce61 0 1px, #54492f 1px 1px 1px inset; box-shadow: #ddce61 0 1px, #54492f 1px 1px 1px inset; }
+  /* line 53, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+  .story-writing-menu .objectives .objectives-list li.objective.current .objective-force-points { font-size: 17px; padding-top: 5px; padding-bottom: 5px; padding-left: 6px; padding-right: 6px; top: 9px; border: none; text-shadow: #b89e66 0 1px, #373229 0 -1px; }
+  /* line 64, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+  .story-writing-menu .objectives .objectives-list li.objective .objective-force-points { font-size: 10px; font-family: "Open Sans", "Verdana", "Helvetica Neue", "Helvetica", "Arial", sans-serif; font-weight: normal; line-height: 10px; padding-top: 4px; padding-right: 4px; padding-left: 4px; padding-bottom: 5px; border: 1px solid white; font-style: normal; font-weight: 600; -moz-border-radius-topright: 10px 7px; -webkit-border-top-right-radius: 10px 7px; border-top-right-radius: 10px 7px; -moz-border-radius-bottomright: 10px 7px; -webkit-border-bottom-right-radius: 10px 7px; border-bottom-right-radius: 10px 7px; -moz-border-radius-topleft: 10px 7px; -webkit-border-top-left-radius: 10px 7px; border-top-left-radius: 10px 7px; -moz-border-radius-bottomleft: 10px 7px; -webkit-border-bottom-left-radius: 10px 7px; border-bottom-left-radius: 10px 7px; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px; box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px; background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffda59), color-stop(100%, #ffb830)); background: -webkit-linear-gradient(#ffda59, #ffb830); background: -moz-linear-gradient(#ffda59, #ffb830); background: -o-linear-gradient(#ffda59, #ffb830); background: linear-gradient(#ffda59, #ffb830); color: #444444; font-size: 10px; padding-top: 4px; padding-bottom: 4px; padding-right: 4px; padding-left: 4px; right: 15px; top: 3px; }
+  /* line 77, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+  .story-writing-menu .inventory .items-list li.item { min-height: 15px; line-height: 15px; padding-left: 38px; background-position: 20px top; margin: 4px 0; -webkit-background-size: auto 15px; -moz-background-size: auto 15px; -o-background-size: auto 15px; background-size: auto 15px; } }
+/* line 91, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu { background-image: url("../images/story-writing-menu-bg.png"); background-position: left; background-repeat: repeat-y; overflow: hidden; *zoom: 1; }
+/* line 98, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu h2 { position: relative; text-shadow: #ddce61 0px 1px; }
+/* line 102, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu h2:before { content: attr(title); position: absolute; top: 1px; color: rgba(150, 129, 83, 0.5); text-shadow: rgba(84, 73, 47, 0.5) -1px -1px; }
+/* line 109, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu h2 { font-weight: bold; }
+/* line 112, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .objectives-list li, .story-writing-menu .items-list li { font-family: "Gentium Book Basic", "Georgia", "Times New Roman", serif; font-style: italic; color: #655738; text-shadow: rgba(221, 206, 97, 0.8) 0px 1px; }
+/* line 120, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .objectives .objectives-list li.objective { position: relative; }
+/* line 123, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .objectives .objectives-list li.objective.current { background: #756541; color: white; text-shadow: none; }
+/* line 128, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .objectives .objectives-list li.objective.current .objective-force-points { background: #5a5343; color: #5a5343; -webkit-box-shadow: #b89e66 0 1px, #373229 0 1px 1px inset; -moz-box-shadow: #b89e66 0 1px, #373229 0 1px 1px inset; box-shadow: #b89e66 0 1px, #373229 0 1px 1px inset; }
+/* line 133, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .objectives .objectives-list li.objective.current .objective-force-points:before { content: ""; }
+/* line 136, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .objectives .objectives-list li.objective .objective-force-points { position: absolute; }
+/* line 139, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .objectives .objectives-list li.objective .objective-force-points:before { content: "+"; }
+/* line 144, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_menu.sass */
+.story-writing-menu .inventory .items-list li.item { background-image: url("../images/menu-item-bullet.png"); background-repeat: no-repeat; }
+
+/* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_enter_text.sass */
+.story-enter-text .story-enter-text-input { padding: 10px; font-size: 28px; -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px inset, white 0 1px; -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px inset, white 0 1px; box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px inset, white 0 1px; }
+
+@media only screen and (max-width: 640px) { /* line 3, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_enter_text.sass */
+  .story-enter-text .story-enter-text-input { padding: 5px; font-size: 14px; -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset, white 0 1px; -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset, white 0 1px; box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px inset, white 0 1px; } }
+/* line 13, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_enter_text.sass */
+.story-enter-text { background: url("../images/book-page-bg.png"); }
+/* line 16, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_story_enter_text.sass */
+.story-enter-text .story-enter-text-input { display: block; border: none; margin: 0; width: 100%; font-family: "Open Sans", "Verdana", "Helvetica Neue", "Helvetica", "Arial", sans-serif; color: #444444; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px inset, white 0 1px; -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px inset, white 0 1px; box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px inset, white 0 1px; }
+
+/* line 1, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_map.sass */
+.map { position: relative; padding-left: 42px; background: url("../images/book-page-left-border.png") left top repeat-y; }
+/* line 6, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_map.sass */
+.map .map-container { position: relative; height: 100%; width: 100%; background: black; }
+/* line 15, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_map.sass */
+.map .map-container .map-tile, .map .map-container .hero { position: absolute; width: 62px; height: 62px; }
+/* line 20, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_map.sass */
+.map .map-container .map-tile { -webkit-box-shadow: rgba(0, 0, 0, 0.97) 62px 62px inset; -moz-box-shadow: rgba(0, 0, 0, 0.97) 62px 62px inset; box-shadow: rgba(0, 0, 0, 0.97) 62px 62px inset; -webkit-transition: box-shadow, 0.3s; -moz-transition: box-shadow, 0.3s; -o-transition: box-shadow, 0.3s; transition: box-shadow, 0.3s; -webkit-transition-delay: 0.4s; -moz-transition-delay: 0.4s; -o-transition-delay: 0.4s; transition-delay: 0.4s; }
+/* line 25, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_map.sass */
+.map .map-container .map-tile.visited { -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+/* line 28, /home/pilaf/projects/tww/tww-mobile/middleman/source/css/_map.sass */
+.map .map-container .hero { z-index: 9; background: url("../images/map-tiles/man.png"); -webkit-transition: left, 0.5s; -moz-transition: left, 0.5s; -o-transition: left, 0.5s; transition: left, 0.5s; }

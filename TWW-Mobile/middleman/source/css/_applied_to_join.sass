@@ -1,0 +1,25 @@
+=applied-to-join-dimensions($scale: 1)
+  .applied-to-join
+    .applied-to-join-story i.icon
+      +button-large-icon($story-icon, left, $scale)
+
+    .applied-to-join-hero i.icon
+      +button-large-icon($hero-icon, right, $scale)
+
+    .applied-to-join-god i.icon
+      +button-large-icon($user-icon, left, $scale)
+
++applied-to-join-dimensions
+
++small-screen
+  +applied-to-join-dimensions(0.5)
+
+.applied-to-join
+  .applied-to-join-story i.icon
+    :background-image image-url($story-icon)
+
+  .applied-to-join-hero i.icon
+    :background-image image-url($hero-icon)
+
+  .applied-to-join-god i.icon
+    :background-image image-url($user-icon)

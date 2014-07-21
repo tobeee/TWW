@@ -1,0 +1,41 @@
+{
+	"author": "tobeee@gmail.com", 
+	"config_version": "2", 
+	"description": "An empty app created by default", 
+	"modules": {
+		"contact": true, 
+		"file": true, 
+		"is": true, 
+		"launchimage": {
+			"background-color": "#ffffff", 
+			"ipad": "images/loading_screen.png", 
+			"ipad-landscape": "images/loading_screen.png", 
+			"ipad-landscape-retina": "images/loading_screen.png", 
+			"ipad-retina": "images/loading_screen.png", 
+			"iphone": "images/loading_screen.png", 
+			"iphone-retina": "images/loading_screen.png", 
+			"iphone-retina4": "images/loading_screen.png"
+		}, 
+		"logging": {
+			"level": "DEBUG"
+		}, 
+		"media": true, 
+		"prefs": true, 
+		"reload": true, 
+		"request": {
+			"permissions": [
+				"http://*/*", 
+				"https://*/*"
+			]
+		}, 
+		"tools": true, 
+		"topbar": true,
+    "tabbar": true,
+    "facebook": {
+      "appid": "246392228747684"
+    }
+	}, 
+	"name": "The Written World", 
+	"platform_version": "v1.4", 
+	"version": "0.1"
+}

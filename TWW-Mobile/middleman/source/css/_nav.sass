@@ -1,0 +1,51 @@
+=nav-dimensions($scale: 1)
+  $-top-height: round($scale * $top-nav-height)
+  $-bottom-height: round($scale * $top-nav-height)
+
+  .top-nav
+    :height $-top-height
+    a
+      :height $-top-height
+
+  .bottom-nav
+    :height $-bottom-height
+
+    a
+      :height $-bottom-height
+
+  body.with-top-nav
+    :padding-top $-top-height
+
+  body.with-bottom-nav
+    :padding-bottom $-bottom-height
+
++nav-dimensions
+
++small-screen
+  +nav-dimensions(0.5)
+
+.top-nav, .bottom-nav
+  :position fixed
+  :display table
+  :table-layout fixed
+  :left 0
+  :right 0
+  :width 100%
+  :background #F4C45F
+  :z-index 999999
+  
+.top-nav
+  :top 0
+
+.bottom-nav
+  :bottom 0
+
+.nav-row
+  :display table-row
+
+  a
+    :display table-cell
+    :text-align center
+    :vertical-align middle
+    :color white
+    +box-shadow(rgba(black, 0.5) 0 0 4px inset)

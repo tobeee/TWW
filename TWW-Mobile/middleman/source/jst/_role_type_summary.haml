@@ -1,0 +1,24 @@
+:plain
+  <header>
+    <h1 class="role-type">The Role of <%= story.get('hero_role_type').shortName %></h1>
+    <h2 class="role-type-subtitle">A guide for the Heroic</h2>
+  </header>
+
+  <div class="role-type-description">
+    <p>
+      <%= story.get('hero_role_type').description %>
+    </p>
+  </div>
+
+  <hr/>
+
+  <h2>This story also has cast in:</h2>
+
+  <ul class="character-list tabular-list">
+    <% _.each(story.get('cast'), function(role) { %>
+      <li class="tabular-list-row">
+        <i class="tabular-list-row-icon"></i>
+        <div class="tabular-list-row-content" title="The role of&hellip;"><%= role.archetype %></div>
+      </li>
+    <% }); %>
+  </ul>

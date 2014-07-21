@@ -1,0 +1,124 @@
+=story-page-dimensions($scale: 1)
+  .story-page
+    .chapter
+      header
+        :margin-bottom round(26px * $scale)
+
+    .chapter-description
+      :margin-bottom round(38px * $scale)
+
+    .items-list, .cast-list, .objectives-list
+      li
+        :line-height round(26px * $scale)
+        +background-size(auto round(26px * $scale))
+
+    .chapter-location-description
+      p
+        :font-size round(21px * $scale)
+
+    .chapter-messages
+      :margin-top round(30px * $scale)
+
+      .meta-text p
+        :font-size round(22px * $scale)
+
+      .encounter
+        h3
+          :border-bottom round(4px * $scale) solid $text-color
+          :font-size round(31px * $scale)
+          :margin-bottom round(10px * $scale)
+
+        p
+          :font-size round(21px * $scale)
+
+      .performed-action, .completed-objective
+        :font-size round(22px * $scale)
+
+      .performed-action .spent-force-points, .completed-objective .gained-force-points
+        :right round(-35px * $scale)
+        :top round(-10px * $scale)
+
+      .performed-action .spent-force-points
+        +badge-red($scale)
+      
+      .completed-objective .gained-force-points
+        +badge-yellow($scale)
+
++story-page-dimensions
+
++small-screen
+  +story-page-dimensions(0.5)
+
+.story-page
+  .record-text
+    @extend .emboss
+
+  .chapter-location-description
+    h3
+      :text-align left
+
+    p
+      :font-family $gentium-book-basic
+      :font-style italic
+
+  .chapter-location-exits, .items-list, .cast-list, .objectives-list
+    :margin-bottom 1em
+
+  .items-list, .cast-list, .objectives-list
+    li
+      :margin-bottom 0.15em
+      :background
+        :position left top
+        :repeat no-repeat
+
+      &:before
+        :content '' !important
+
+  .items-list
+    li
+      :background-image image-url('item-bullet.png')
+
+  .cast-list
+    li
+      :background-image image-url('user-bullet.png')
+
+  .objectives-list
+    li
+      :background-image image-url('objective-bullet.png')
+
+  .chapter-messages
+    .record-text
+      :margin-bottom 1em
+
+    .meta-text
+      h3
+        :text-align left
+
+    .encounter
+      h3
+        :padding-bottom 0.13em
+
+      p
+        :font-family $gentium-book-basic
+        :font-style italic
+
+    .performed-action, .completed-objective
+      :position relative
+      :font-style italic
+      :margin-left 5%
+      :margin-bottom 1em
+
+    .performed-action .spent-force-points, .completed-objective .gained-force-points
+      :position absolute
+
+    .performed-action
+      :color #BF4330
+
+      .spent-force-points:before
+        :content '-'
+
+    .completed-objective
+      :color #DDAB37
+
+      .gained-force-points:before
+        :content '+'

@@ -1,0 +1,31 @@
+.map
+  :position relative
+  :padding-left image-width('book-page-left-border.png')
+  :background image-url('book-page-left-border.png') left top repeat-y
+
+  .map-container
+    $tile-width: 62px
+    $tile-height: 62px
+    :position relative
+    :height 100%
+    :width 100%
+    //:background image-url('map-tiles/water.png')
+    :background black
+
+    .map-tile, .hero
+      :position absolute
+      :width $tile-width
+      :height $tile-height
+
+    .map-tile
+      +box-shadow(rgba(black, 0.97) $tile-width $tile-height inset)
+      +transition(box-shadow, 0.3s)
+      +transition-delay(0.4s)
+
+      &.visited
+        +box-shadow(none)
+
+    .hero
+      :z-index 9
+      :background image-url('map-tiles/man.png')
+      +transition(left, 0.5s)

@@ -1,0 +1,13 @@
+:plain
+  <div class="form-field">
+    <label class="align-center">Choose a body type for <%= name %></label>
+    <div class="character-body-types">
+      <% _.each(bodyTypes, function(bodyType) { %>
+        <img src="/images/body-types/<%= bodyType.image %>" data-id="<%= bodyType.id %>" class="character-body-type">
+      <% }); %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button id="character-body-ok" class="button-tiny">OK</button>
+  </div>

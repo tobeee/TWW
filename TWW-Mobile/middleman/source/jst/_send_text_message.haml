@@ -1,0 +1,16 @@
+:plain
+  <% if (message.isRecordText()) { %>
+    <div class="record-text">
+      <%= tww.h.simpleFormat(message.escape('sendText')) %>
+    </div>
+  <% } else if (message.isAction()) { %>
+    <div class="performed-action">
+      <div class="spent-force-points"><%= message.get('actions') %></div>
+      <%= message.escape('sendText') %>
+    </div>
+  <% } else { %>
+    <div class="meta-text by-<%= message.get('who').toLowerCase() %>">
+      <h3><%= _.capitalize(message.get('who')) %></h3>
+      <%= tww.h.simpleFormat(message.escape('sendText')) %>
+    </div>
+  <% } %>

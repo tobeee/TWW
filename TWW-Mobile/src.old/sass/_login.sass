@@ -1,0 +1,24 @@
+=login-dimensions($scale: 1)
+  #facebook-login-button
+    :width round(496px * $scale)
+    :height round(86px * $scale)
+    :top round(-10px * $scale)
+
++login-dimensions($scale: 1)
+
++small-screen
+  +login-dimensions(0.5)
+
+.login-screen
+  :padding-top 0 !important
+  +clearfix
+
+#facebook-login-button
+  :display block
+  :position relative
+  :padding 0
+  :border none
+  :background transparent image-url('fb-button.png')
+  :cursor pointer
+  :margin 0 auto
+  +background-size(cover)

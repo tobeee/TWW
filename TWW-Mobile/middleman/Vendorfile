@@ -1,0 +1,11 @@
+folder 'vendor/js' do
+  #file 'zepto.js', 'http://zeptojs.com/zepto.js'
+  #file 'zepto.scroll.js', 'https://raw.github.com/suprMax/ZeptoScroll/master/static/zepto.scroll.js'
+  file 'jquery.js', 'http://code.jquery.com/jquery-2.0.2.js'
+  file 'underscore.js', 'http://underscorejs.org/underscore.js'
+  file 'underscore.string.js', 'https://raw.github.com/edtsech/underscore.string/master/lib/underscore.string.js'
+  file 'moment.js', 'https://raw.github.com/timrwood/moment/1.7.2/moment.js'
+  file 'backbone.marionette.js', 'http://marionettejs.com/downloads/core/backbone.marionette.js'
+  file 'backbone.wreqr.js', 'https://raw.github.com/marionettejs/backbone.wreqr/master/lib/backbone.wreqr.js'
+  file 'backbone.babysitter.js', 'https://raw.github.com/marionettejs/backbone.babysitter/master/lib/backbone.babysitter.js'
+end

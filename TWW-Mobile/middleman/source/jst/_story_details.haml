@@ -1,0 +1,49 @@
+:plain
+  <header>
+    <h1 class="large-heading story-title"><%= story.get('title') %></h1>
+    <h2 class="story-subtitle">A story of <%= story.get('type') %></h2>
+  </header>
+
+  <div class="button-large story-god icon-left">
+    <i class="icon"></i>
+    <small>The God</small>
+    <%= story.getGodUser().get('firstname') %>
+    <%= story.getGodUser().get('lastname') %>
+  </div>
+
+  <div class="button-large story-hero icon-right">
+    <i class="icon"></i>
+    <% if (story.get('has_character')) { %>
+      <small>And the Hero</small>
+      <%= story.get('hero').storyName %>
+    <% } else { %>
+      <small>Needs a Hero to be</small>
+      <%= story.get('hero_role_type').name %>
+    <% } %>
+  </div>
+
+  <div class="button-large story-type icon-left">
+    <i class="icon"></i>
+    <% if (story.get('has_character')) { %>
+      <small>In a story of</small>
+    <% } else { %>
+      <small>For a story of</small>
+    <% } %>
+    <%= story.get('type') %>
+  </div>
+
+  <div class="page-actions">
+    <% if (story.canApplyToJoin()) { %>
+      <button class="book-button story-action story-apply-to-join">
+        <span title="Apply to Join">Apply to Join</span>
+      </button>
+    <% } else if (story.appliedToJoin()) { %>
+      <button disabled="disabled" class="book-button story-action story-apply-to-join">
+        <span title="Apply to Join">Apply to Join</span>
+      </button>
+    <% } else /* story has a character or is mine */ { %>
+      <button class="book-button story-action story-read">
+        <span title="Read">Read</span>
+      </button>
+    <% } %>
+  </div>

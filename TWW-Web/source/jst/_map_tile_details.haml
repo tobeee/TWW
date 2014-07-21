@@ -1,0 +1,27 @@
+:plain
+  <div class="map-td-close"></div>
+  <div class="map-td-body">
+    <div class="map-td-name"><%= tile.get('name') %></div>
+    <% if (tile.get('desc').length) { %>
+      <div class="map-td-description">
+        <h3>Description</h3>
+        <%= tile.get('desc') %>
+      </div>
+    <% } %>
+    <% if (tile.get('castPresent').length) { %>
+      <div class="map-td-cast">
+        <h3>Cast</h3>
+        <% tile.get('castPresent').each(function(character) { %>
+          <div class="map-td-character"><%= character.get('name') %></div>
+        <% }); %>
+      </div>
+    <% } %>
+    <% if (tile.get('items').length) { %>
+      <div class="map-td-items">
+        <h3>Items</h3>
+        <% tile.get('items').each(function(item) { %>
+          <div class="map-td-item"><%= item.get('name') %></div>
+        <% }); %>
+      </div>
+    <% } %>
+  </div>

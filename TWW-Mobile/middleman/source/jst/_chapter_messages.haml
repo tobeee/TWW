@@ -1,0 +1,10 @@
+:plain
+  <div class="chapter-messages">
+    <% _.each(messages, function(message, chapter) { %>
+      <% _.tap(tww.t[_.result(message, 'renderWith')], function(t) { %>
+        <% if (t) { %>
+          <%= t({message: message}) %>
+        <% } %>
+      <% }); %>
+    <% }); %>
+  </div>

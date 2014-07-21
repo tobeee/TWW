@@ -1,0 +1,6 @@
+:plain
+  <div class="map-tile" data-coords="<%= tile.x %>,<%= tile.y %>" style="z-index: <%= map.width - tile.x %>; left: <%= tww.views.Map.TILE_INNER_WIDTH * tile.x %>px; top: <%= tww.views.Map.TILE_INNER_WIDTH * tile.y - tww.views.Map.TILE_PADDING %>px; background-image: url('<%= tww.helpers.tilePath(tile.get('img')) %>')">
+    <% tile.get('castPresent').each(function(character) { %>
+      <div class="character"><%= character.get('name') %></div>
+    <% }); %>
+  </div>

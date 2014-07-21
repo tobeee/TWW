@@ -1,0 +1,6 @@
+/* line 3, ../sass/mock_forge_tabbar.sass */
+#-mock-forge-tabbar { position: fixed; bottom: 0; right: 0; padding-bottom: 5px; }
+/* line 9, ../sass/mock_forge_tabbar.sass */
+#-mock-forge-tabbar .-mock-forge-tabbar-button { cursor: pointer; display: inline-block; padding: 5px; margin-right: 5px; color: white; background: rgba(0, 0, 0, 0.7); font-size: 10px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; text-shadow: black 1px 1px; }
+/* line 20, ../sass/mock_forge_tabbar.sass */
+#-mock-forge-tabbar .-mock-forge-tabbar-button:hover { background: black; }

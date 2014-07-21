@@ -1,0 +1,13 @@
+=role-type-summary-dimensions($scale: 1)
+  .role-type-summary
+    .role-type-description
+      :font-size round(25px * $scale)
+      :margin-top 40px
+
+  .character-list
+    :margin-bottom round(150px * $scale)
+
++role-type-summary-dimensions
+
++small-screen
+  +role-type-summary-dimensions(0.5)

@@ -1,0 +1,47 @@
+=large-list-dimensions($scale: 1)
+  li
+    $-height: 182px
+    :height round($-height * $scale)
+    :padding
+      :top round(47px * $scale)
+      :left round(226px * $scale)
+      :right round(20px * $scale)
+    +background-size(auto ($-height * $scale))
+
+    i.list-item-icon
+      :left round(72px * $scale)
+      :top round(47px * $scale)
+      :width round(80px * $scale)
+      :height round(80px * $scale)
+      +background-size(cover)
+
+  h2
+    :font-size round(36px * $scale)
+
+  p
+    :font-size round(28px * $scale)
+
+ul.large-list
+  +large-list-dimensions
+
+  +small-screen
+    +large-list-dimensions(0.5)
+
+  li
+    :position relative
+    :display block
+    :background
+      :image image-url('notification-bg.png')
+      :color white
+    +box-sizing(border-box)
+
+    i.list-item-icon
+      :position absolute
+
+  h2
+    :font-weight bold
+    :margin-bottom 0.2em
+
+  p
+    :font-family $gentium-book-basic
+    :font-style italic

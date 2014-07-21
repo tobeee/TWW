@@ -1,0 +1,46 @@
+.force-points-count
+  :font-weight bolder
+
+.force-points-available
+  :font-family $gentium-book-basic
+  :font-style italic
+
+.book-cover
+  .force-points
+    +clearfix
+
+  .force-points-counter
+    :width 55%
+    :text-align center
+    :float left
+
+    hr
+      :margin 0
+
+  .force-points-count
+    :display inline-block
+    :position relative
+    +text-shadow($book-cover-highlight-color 0px 1px)
+
+    &:before
+      :content attr(title)
+      :position absolute
+      :left 1px
+      :top 1px
+      :color rgba(lighten($book-cover-fg-color, 10), 0.5)
+      +text-shadow(rgba($book-cover-shadow-color, 0.5) -1px -1px)
+
+  .force-points-available
+    :color darken($book-cover-fg-color, 5)
+    +text-shadow($book-cover-highlight-color 0px 1px)
+
+  .force-points-buy-more
+    :position relative
+    :float right
+    :width 40%
+    :text-align center
+    :font-weight bold
+    :color $book-cover-dark-fg-color
+    :background $book-cover-fg-color
+    +text-shadow($book-cover-dark-highlight-color 0 1px, $book-cover-dark-shadow-color 0 -1px 1px)
+    +box-sizing(border-box)

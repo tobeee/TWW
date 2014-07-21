@@ -1,0 +1,112 @@
++keyframes(rotate-bookshelf-expand-icon)
+  0%
+    +rotate(0deg)
+  100%
+    +rotate(-180deg)
+
+$bookshelf-toggle-transition-duration: 0.2s
+
+$bookshelf-content-top-height: 22px
+$bookshelf-content-min-height: 295px
+$bookshelf-content-v-padding: 41px
+$bookshelf-content-h-padding: 35px
+
+$book-width: 171px
+$book-height: 226px
+$book-margin-right: 28px
+$book-font-size: 23px
+$book-padding-top: 24px
+$book-h-padding: 16px
+
+$hero-height: 232px
+$hero-statue-width: 91px
+$hero-statue-height: 158px
+
+=bookshelf-dimensions($scale: 1)
+  .bookshelf
+    .bookshelf-content
+      $-top-height: round($bookshelf-content-top-height * $scale)
+      $-bottom-height: round($bookshelf-content-min-height * $scale) - $-top-height
+      :min-height round($bookshelf-content-min-height * $scale)
+      :padding
+        :top round($bookshelf-content-v-padding * $scale)
+        :left round($bookshelf-content-h-padding * $scale)
+      +background(image-url('bookshelf-t.png') left top repeat-x, image-url('bookshelf-l.png') left $-top-height repeat-y, image-url('bookshelf-r.png') right $-top-height repeat-y, image-url('bookshelf-c.png') left $-top-height)
+      +background-size(auto $-top-height, auto $-bottom-height, auto $-bottom-height, auto $-bottom-height)
+
+      .book, .hero
+        :width round($book-width * $scale)
+        :margin-right round($book-margin-right * $scale)
+        :font-size round($book-font-size * $scale)
+        :padding
+          :left round($book-h-padding * $scale)
+          :right round($book-h-padding * $scale)
+
+      .book
+        :height round($book-height * $scale)
+        :padding-top round($book-padding-top * $scale)
+
+      .hero
+        :height round($hero-height * $scale)
+        +background-size(round($hero-statue-width * $scale) round($hero-statue-height * $scale))
+
++bookshelf-dimensions
+
+.bookshelf
+  :position relative
+
+  .bookshelf-header .bookshelf-header-buttons button
+    &.bookshelf-toggle i
+      +transition(background-image 0 $bookshelf-toggle-transition-duration)
+      +animation(rotate-bookshelf-expand-icon $bookshelf-toggle-transition-duration)
+
+  .bookshelf-content
+    :position relative
+    +box-sizing(border-box)
+    +clearfix
+
+    .book, .hero
+      :display block
+      :position absolute
+      :font-family $gentium-book-basic
+      :font-weight normal
+      :font-style italic
+      :text-align center
+      +box-sizing(border-box)
+
+    .book
+      :color rgba(white, 0.8)
+      +box-shadow(rgba(black, 0.5) 0 2px 3px)
+      +text-shadow(rgba(black, 0.1) -1px -1px 1px, rgba(white, 0.2) 1px 1px 1px)
+      +background-size(cover)
+
+      &:nth-child(3n)
+        :background-image image-url('book-blue.png')
+
+      &:nth-child(3n+1)
+        :background-image image-url('book-yellow.png')
+        :color #957536
+        +text-shadow(#FFE24E 0 1px 0)
+
+      &:nth-child(3n+2)
+        :background-image image-url('book-red.png')
+
+    .hero
+      :color #666
+      :background image-url('hero.png') center bottom no-repeat
+      +text-shadow(rgba(white, 0.5) 0 1px 0)
+
+  &.collapsed
+    .bookshelf-content
+      :height 0
+      :padding-top 0
+      :padding-bottom 0
+
+    .bookshelf-header
+      .bookshelf-toggle
+        i
+          :background-image image-url('bookshelf-close-icon.png') !important
+          +animation(rotate-bookshelf-expand-icon $bookshelf-toggle-transition-duration)
+
++small-screen
+  +bookshelf-dimensions(0.5)

@@ -1,0 +1,139 @@
+$book-button-text-color: #949494
+
+$button-small-width: 50px
+$button-small-height: 49px
+
+$button-small-icon-top: 11px
+$button-small-icon-left: 11px
+$button-small-icon-width: 26px
+$button-small-icon-height: 26px
+
+$button-large-height: 114px
+$button-large-icon-h-center-offset: 126px
+$button-large-icon-v-center-offset: $button-large-height / 2
+
+=button-large-icon($image, $orientation, $scale: 1)
+  $width: image-width($image)
+  $height: image-height($image)
+  :width round($width * $scale)
+  :height round($height * $scale)
+  @if $orientation == left
+    :left round(($button-large-icon-h-center-offset - $width / 2) * $scale)
+  @else
+    :right round(($button-large-icon-h-center-offset - $width / 2) * $scale)
+  :top round(($button-large-icon-v-center-offset - $height / 2) * $scale)
+
+=buttons-dimensions($scale: 1)
+  .book-button, button.button-small
+    +box-shadow(rgba(white, 0.5) 0 1px 0 inset, rgba(black, 0.8) 0 2px 2px, rgba(black, 0.01) 0 0 0 round(5px * $scale))
+
+  .book-button
+    :width round(258px * $scale)
+    :height round(69px * $scale)
+    :font-size round(28px * $scale)
+    +border-radius(round(4px * $scale))
+
+    span:before
+      +text-shadow(rgba(black, 0.4) -1px -1px round(2px * $scale))
+
+  .button-large
+    :min-height round($button-large-height * $scale)
+    :margin-top round(56px * $scale)
+    :padding
+      :top round(26px * $scale)
+      :left round(48px * $scale)
+      :right round(48px * $scale)
+      :bottom round(26px * $scale)
+    :font-size round(29px * $scale)
+
+    small
+      :margin-bottom 0.21em
+      :font-size round(23px * $scale)
+
+    &.icon-left
+      :padding-left round(270px * $scale)
+
+    &.icon-right
+      :padding-right round(270px * $scale)
+
+  button.button-small
+    :width round($button-small-width * $scale)
+    :height round($button-small-height * $scale)
+    +background-size((image-width('book-page-bg.png') * $scale) (image-height('book-page-bg.png') * $scale))
+    +border-radius(round(8px * $scale))
+
+    i
+      :top round($button-small-icon-top * $scale)
+      :left round($button-small-icon-left * $scale)
+      :width round($button-small-icon-width * $scale)
+      :height round($button-small-icon-height * $scale)
+
++buttons-dimensions
+
++small-screen
+  +buttons-dimensions(0.5)
+
+.book-button, button.button-small
+  :position relative
+  :display inline-block
+  :border 1px solid rgba(black, 0.3)
+  :background-image image-url('book-page-bg.png')
+  :cursor pointer
+
+.book-button
+  :font-family $open-sans
+  :font-weight bold
+  :color $book-button-text-color
+  +background-size(cover)
+
+  span
+    :display inline-block
+    :margin 0 auto
+    :text-align left
+    :position relative
+    :overflow hidden
+
+    &:before
+      :position absolute !important
+      :width 200%
+      :content attr(title)
+      :left 1px
+      :top 1px
+      :color rgba(white, 0.4)
+
+  &:disabled
+    +background(linear-gradient(rgba(#CCC, 0.5), rgba(#CCC, 0.5)), image-url('book-page-bg.png'))
+    +background-size(cover, cover)
+    :color rgba($book-button-text-color, 0.5)
+    :border 1px solid rgba(black, 0.15)
+
+.button-large
+  @extend .emboss
+  :position relative
+  :text-align left
+  :cursor pointer
+  :font-weight bold
+  +box-sizing(border-box)
+
+  small
+    :display block
+    :font-family $gentium-book-basic
+    :font-weight normal
+    :font-style italic
+
+  i.icon
+    :position absolute
+    +background-size(cover)
+
+button.button-small
+  :vertical-align middle
+
+  i
+    :position absolute
+    +background-size(cover)
+
+    &.icon-plus
+      :background-image image-url('bookshelf-add-icon.png')
+
+    &.icon-chevron-down
+      :background-image image-url('bookshelf-expand-icon.png')

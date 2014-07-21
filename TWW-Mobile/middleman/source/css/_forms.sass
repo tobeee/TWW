@@ -1,0 +1,40 @@
+=form-dimensions($scale: 1)
+  input.text-field, select
+    :font-size round($base-font-size * $scale)
+
+  input.text-field, textarea, select
+    :padding round(15px * $scale) round(10px * $scale)
+
++form-dimensions
+
++small-screen
+  +form-dimensions(0.5)
+
+form
+  :margin-top 2em
+
+.form-field
+  :margin-bottom 4em
+
+.form-actions
+  :text-align right
+
+input, textarea, select
+  :font-family $open-sans
+  :color $text-color
+  :width 100%
+  +box-sizing(border-box)
+
+input.text-field, textarea
+  :border 1px solid #9b9b9b
+  :background white
+  +border-radius(4px)
+  +box-shadow(rgba(black, 0.2) 0 1px 1px inset)
+
+label
+  :font-weight bold
+  :display block
+  :margin-bottom 1.5em
+
+  &.align-center
+    :text-align center

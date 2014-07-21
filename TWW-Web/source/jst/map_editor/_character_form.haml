@@ -1,0 +1,22 @@
+:plain
+  <form id="med-cast-form">
+    <p>
+      <label for="med-cast-form-archetype">What type of character is this?</label>
+      <input autofocus="autofocus" id="med-cast-form-archetype" name="archetype" value="<%= _.escape(character.get('archetype')) %>">
+    </p>
+
+    <p>
+      <label for="med-cast-form-name">Name:</label>
+      <input id="med-cast-form-name" name="name" value="<%= _.escape(character.get('name')) %>">
+    </p>
+
+    <p>
+      <label for="med-cast-form-description">Description:</label>
+      <textarea id="med-cast-form-description" name="desc"><%= _.escape(character.get('desc')) %></textarea>
+    </p>
+
+    <p>
+      <button class="ok">Create</button>
+      <button class="cancel">Cancel</button>
+    </p>
+  </form>

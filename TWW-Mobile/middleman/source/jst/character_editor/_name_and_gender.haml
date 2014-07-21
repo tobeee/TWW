@@ -1,0 +1,29 @@
+:plain
+  <form id="character-name-and-gender-form">
+    <p class="form-field">
+      <label for="character-name">
+        What is your
+        <%= character.escape('archetype') %>
+        called?
+      </label>
+
+      <input type="text" value="<%= character.escape('name') %>" id="character-name" name="name" class="text-field" autofocus>
+    </p>
+
+    <p class="form-field">
+      <label for="character-gender">
+        Is your
+        <%= character.escape('archetype') %>
+        a boy or a girl?
+      </label>
+
+      <select id="character-gender" name="gender">
+        <option value="m" <% if (character.get('gender') == 'm') { %>selected<% } %>>Boy</option>
+        <option value="f" <% if (character.get('gender') == 'f') { %>selected<% } %>>Girl</option>
+      </select>
+    </p>
+
+    <p class="form-actions">
+      <button id="character-name-ok" class="button-tiny">OK</button>
+    </p>
+  </form>

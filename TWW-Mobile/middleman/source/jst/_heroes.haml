@@ -1,0 +1,6 @@
+:plain
+  <% _.each(collection, function(character) { %>
+    <a class="hero" href="#characters/<%= character.id %>" data-id="<%= character.id %>">
+      <%= character.get('name') %>
+    </a>
+  <% }); %>

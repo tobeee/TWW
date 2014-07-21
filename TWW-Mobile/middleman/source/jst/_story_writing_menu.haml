@@ -1,0 +1,51 @@
+:plain
+  <div class="force-points">
+    <div class="force-points-counter">
+      <div class="force-points-count" title="<%= story.state.forcePoints %>">
+        <%= story.state.forcePoints %>
+      </div>
+
+      <hr/>
+
+      <div class="force-points-available">
+        Force Points available.
+      </div>
+    </div>
+
+    <div class="force-points-buy-more">
+      Buy<br/>More
+    </div>
+  </div>
+
+  <hr/>
+
+  <div class="objectives">
+    <h2 title="Objectives">Objectives</h2>
+
+    <ul class="objectives-list">
+      <% story.state.objectives.each(function(objective) { %>
+        <li class="objective<% if (objective.get('current')) { %> current<% } %>">
+          <div class="objective-force-points">
+            <% if (objective.get('current')) { %>
+              &#10003;
+            <% } else { %>
+              <%= objective.get('fpValue') %>
+            <% } %>
+          </div>
+          <%= objective.get('name') %>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+
+  <hr/>
+
+  <div class="inventory">
+    <h2 title="Inventory">Inventory</h2>
+
+    <ul class="items-list">
+      <% story.state.inventory.each(function(item) { %>
+        <li class="item"><%= item.get('name') %></li>
+      <% }); %>
+    </ul>
+  </div>

@@ -1,0 +1,44 @@
+{
+	"author": "tobeee@gmail.com",
+	"config_version": "2",
+	"description": "An empty app created by default",
+	"modules": {
+		"contact": true,
+		"file": true,
+		"is": true,
+		"launchimage": {
+			"background-color": "#ffffff",
+			"ipad": "images/loading_screen.png",
+			"ipad-landscape": "images/loading_screen.png",
+			"ipad-landscape-retina": "images/loading_screen.png",
+			"ipad-retina": "images/loading_screen.png",
+			"iphone": "images/loading_screen.png",
+			"iphone-retina": "images/loading_screen.png",
+			"iphone-retina4": "images/loading_screen.png"
+		},
+		"logging": {
+			"level": "DEBUG"
+		},
+		"media": {},
+		"package_names": {
+			"ios": "com.playlab.writtenworld"
+		},
+		"payments": {
+			"androidPublicKey": "1"
+		},
+		"prefs": true,
+		"reload": true,
+		"request": {
+			"permissions": [
+				"http://*/*",
+				"https://*/*"
+			]
+		},
+		"tools": true,
+		"topbar": true,
+		"tabbar": true
+	},
+	"name": "The Written World",
+	"platform_version": "v1.4",
+	"version": "0.1"
+}

@@ -1,0 +1,91 @@
+=character-editor-dimensions($scale: 1)
+  .character-edit-main
+    .character-edit-intro
+      :margin-top round(55px * $scale)
+    .character-new-or-edit
+      :padding-top round(100px * $scale)
+
+      .character-new, .character-edit
+        :padding-top round((max(image-height('new-character.png'), image-height('edit-character.png')) + 5px) * $scale)
+        :width round(max(image-width('new-character.png'), image-width('edit-character.png')) * $scale)
+
+  .character-edit-body
+    .character-body-type
+      :height round(345px * $scale)
+
+  .character-edit-items
+    .character-edit-items-preview
+      :top round($top-nav-height * $scale)
+      :bottom round($bottom-nav-height * $scale)
+
+    .force-points-container
+      :padding 0 round(22px * $scale)
+        :bottom round(18px * $scale)
+
+    .force-points-count
+      :font-size round(70px * $scale)
+      :margin
+        :top round(6px * $scale)
+        :bottom round(-2px * $scale)
+
+    .force-points-buy-more
+      :margin-top round(18px * $scale)
+      :height round(78px * $scale)
+      :padding-top round(22px * $scale)
+      :font-size round(17px * $scale)
+      +border-radius(round(2px * $scale))
+      +box-shadow($book-cover-highlight-color 0 1px, $book-cover-shadow-color 1px round(2px * $scale) 1px inset)
+    
+    .force-points-available
+      :font-size round(17px * $scale)
+      :margin-top round(3px * $scale)
+
++character-editor-dimensions
+
++small-screen
+  +character-editor-dimensions(0.5)
+
+.character-edit-main
+  .character-new-or-edit
+    +clearfix
+
+    .character-new, .character-edit
+      :background center top no-repeat
+      :text-align center
+
+    .character-new
+      :float left
+      :margin-left 10%
+      :background-image image-url('new-character.png')
+
+    .character-edit
+      :float right
+      :margin-right 10%
+      :background-image image-url('edit-character.png')
+
+.character-edit-body
+  .character-body-types
+    :overflow-x auto
+    :width 100%
+    :white-space nowrap
+    :text-align center
+
+  .character-body-type
+    :vertical-align middle
+    +scale(0.75)
+    +opacity(0.5)
+    +transition(opacity 0.5s, transform 0.5s)
+
+    &.-current
+      +scale(1)
+      +opacity(1)
+
+.character-edit-items
+  :position relative
+  :padding-left 50%
+
+  .character-edit-items-preview
+    +box-sizing(border-box)
+    :position fixed
+    :left 0
+    :width 50%

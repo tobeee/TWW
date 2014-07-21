@@ -1,0 +1,147 @@
+$story-writing-menu-content-padding-left: 40px
+
+=story-writing-menu-dimensions($scale: 1)
+  .story-writing-menu
+    :padding-left round(128px * $scale)
+    :padding-top round(20px * $scale)
+    +background-size(round(image-width('story-writing-menu-bg.png') * $scale) 1px)
+
+    h2
+      :font-size round(28px * $scale)
+      :padding 0 round($story-writing-menu-content-padding-left * $scale)
+      :margin-bottom round(14px * $scale)
+
+      &:before
+        :left round($story-writing-menu-content-padding-left * $scale) + 1px
+
+    .force-points
+      :padding-left round($story-writing-menu-content-padding-left * $scale)
+      :padding-right round(30px * $scale)
+
+    .force-points-count
+      :font-size round(120px * $scale)
+      :margin-bottom round(-5px * $scale)
+
+    .force-points-buy-more
+      :margin-top round(18px * $scale)
+      :height round(134px * $scale)
+      :padding-top round(39px * $scale)
+      :font-size round(29px * $scale)
+      +border-radius(round(3px * $scale))
+      +box-shadow($book-cover-highlight-color 0 1px, $book-cover-shadow-color 1px round(2px * $scale) 1px inset)
+    
+    .force-points-available
+      :font-size round(30px * $scale)
+      :margin-top round(5px * $scale)
+
+    .items-list li, .objectives-list li
+      :font-size round(23px * $scale)
+
+    .objectives
+      .objectives-list
+        li.objective
+          :padding
+            :left round($story-writing-menu-content-padding-left * $scale)
+          :height round(52px * $scale)
+          :line-height round(52px * $scale)
+
+          &.current
+            :height round(74px * $scale)
+            :line-height round(74px * $scale)
+            +box-shadow($book-cover-highlight-color 0 1px, $book-cover-shadow-color 1px round(2px * $scale) 1px inset)
+
+            .objective-force-points
+              :font-size round(33px * $scale)
+              :padding
+                :top round(10px * $scale)
+                :bottom round(9px * $scale)
+                :left round(12px * $scale)
+                :right round(12px * $scale)
+              :top round(17px * $scale)
+              :border none
+              +text-shadow($book-cover-dark-highlight-color 0 1px, $book-cover-dark-shadow-color 0 round(-2px * $scale))
+
+          .objective-force-points
+            +badge-yellow($scale)
+            :font-size round(19px * $scale)
+            :padding
+              :top round(8px * $scale)
+              :bottom round(7px * $scale)
+              :right round(7px * $scale)
+              :left round(7px * $scale)
+            :right round(30px * $scale)
+            :top round(6px * $scale)
+
+    .inventory
+      .items-list
+        li.item
+          $-bullet-height: round(image-height('menu-item-bullet.png') * $scale)
+          :min-height $-bullet-height
+          :line-height $-bullet-height
+          :padding-left round(($story-writing-menu-content-padding-left + 35px) * $scale)
+          :background-position round($story-writing-menu-content-padding-left * $scale) top
+          :margin round(8px * $scale) 0
+          +background-size(auto $-bullet-height)
+
++story-writing-menu-dimensions
+
++small-screen
+  +story-writing-menu-dimensions(0.5)
+
+.story-writing-menu
+  :background
+    :image image-url('story-writing-menu-bg.png')
+    :position left
+    :repeat repeat-y
+  +clearfix
+
+  h2
+    :position relative
+    +text-shadow($book-cover-highlight-color 0px 1px)
+
+    &:before
+      :content attr(title)
+      :position absolute
+      :top 1px
+      :color rgba(lighten($book-cover-fg-color, 10), 0.5)
+      +text-shadow(rgba($book-cover-shadow-color, 0.5) -1px -1px)
+
+  h2
+    :font-weight bold
+
+  .objectives-list li, .items-list li
+    :font-family $gentium-book-basic
+    :font-style italic
+    :color darken($book-cover-fg-color, 5)
+    +text-shadow(rgba($book-cover-highlight-color, 0.8) 0px 1px)
+
+  .objectives
+    .objectives-list
+      li.objective
+        :position relative
+
+        &.current
+          :background $book-cover-fg-color
+          :color white
+          +text-shadow(none)
+
+          .objective-force-points
+            :background $book-cover-dark-fg-color
+            :color $book-cover-dark-fg-color
+            +box-shadow($book-cover-dark-highlight-color 0 1px, $book-cover-dark-shadow-color 0 1px 1px inset)
+
+            &:before
+              :content ''
+
+        .objective-force-points
+          :position absolute
+
+          &:before
+            :content '+'
+
+  .inventory
+    .items-list
+      li.item
+        :background
+          :image image-url('menu-item-bullet.png')
+          :repeat no-repeat

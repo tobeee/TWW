@@ -1,0 +1,16 @@
+:plain
+  <div class="bookshelf-header section-header">
+    <div class="bookshelf-header-buttons section-header-buttons">
+      <% if (toggleButton) { %>
+        <button class="button-small bookshelf-toggle"><i class="icon-chevron-down"></i></button>
+      <% } %>
+      <% if (showAddButton) { %>
+        <button class="button-small bookshelf-add"><i class="icon-plus"></i></button>
+      <% } %>
+    </div>
+    <%= title %>
+  </div>
+  <div class="bookshelf-content-wrapper">
+    <div class="bookshelf-content">
+    </div>
+  </div>

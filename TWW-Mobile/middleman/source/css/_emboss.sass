@@ -1,0 +1,20 @@
+=emboss-dimensions($scale: 1)
+  .emboss
+    :font-size round(23px * $scale)
+    :padding round(15px * $scale) 5%
+    +border-radius(round(7px * $scale))
+    +box-shadow(rgba(white, 0.5) 0 1px 0 inset, rgba(black, 0.05) 0 -1px 0 inset, rgba(black, 0.2) 0 1px 1px, rgba(black, 0.01) 0 0 0 round(5px * $scale))
+
+.emboss
+  :background transparent
+  :border 1px solid rgba(#DCDCDC, 0.8)
+  :font-weight bold
+
+  p
+    :margin 0
+
++emboss-dimensions
+
++small-screen
+  .emboss
+    +emboss-dimensions(0.5)

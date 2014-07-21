@@ -1,0 +1,40 @@
+:plain
+  <div class="chapter">
+    <header>
+      <h1><%= chapter.name %></h1>
+      <h2>Chapter <%= index + 1 %></h2>
+    </header>
+
+    <div class="chapter-description record-text">
+      <%= tww.h.simpleFormat(_.escape(chapter.desc)) %>
+    </div>
+
+    <div class="chapter-location-description">
+      <h3 class="chapter-location-name"><%= mapTile.get('name') %></h3>
+      <%= tww.h.simpleFormat(mapTile.escape('desc')) %>
+    </div>
+
+    <% _.tap(mapTile.exits(), function(exits) { %>
+      <% if (!_.isEmpty(exits)) { %>
+        <ul class="bulleted-list chapter-location-exits">
+          <% _.each(mapTile.exits(), function(exit) { %>
+            <li><%= exit[1].get('name') %> is to the <%= exit[0] %></li>
+          <% }); %>
+        </ul>
+      <% } %>
+    <% }); %>
+
+    <% if (!_.isEmpty(chapter.objectives)) { %>
+      <%= tww.t.objectives_list({objectives: chapter.objectives}) %>
+    <% } %>
+
+    <% if (!_.isEmpty(mapTile.get('items'))) { %>
+      <%= tww.t.items_list({items: mapTile.get('items')}) %>
+    <% } %>
+
+    <% if (!_.isEmpty(mapTile.get('castPresent'))) { %>
+      <%= tww.t.cast_list({cast: mapTile.get('castPresent')}) %>
+    <% } %>
+
+    <%= tww.t.chapter_messages({messages: messages}) %>
+  </div>

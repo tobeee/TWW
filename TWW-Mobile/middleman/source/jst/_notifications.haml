@@ -1,0 +1,12 @@
+:plain
+  <% notifications.each(function(notification) { %>
+    <li class="notification <%= notification.get('my_turn') ? 'notification-your-turn' : 'notification-accepted' %>">
+      <i class="notification-icon list-item-icon"></i>
+      <h2 class="notification-action">
+        <%= notification.get('my_turn') ? "It's your turn!" : "You were accepted!" %>
+      </h2>
+      <p class="notification-subject">
+        In &ldquo;<%= notification.get('title') %>&rdquo;
+      </p>
+    </li>
+  <% }); %>

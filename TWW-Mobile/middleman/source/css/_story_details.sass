@@ -1,0 +1,27 @@
+$story-details-type-icon: 'vengeance-book.png'
+
+=story-details-dimensions($scale: 1)
+  .story-details
+    .story-god i.icon
+      +button-large-icon($user-icon, left, $scale)
+
+    .story-hero i.icon
+      +button-large-icon($hero-icon, right, $scale)
+
+    .story-type i.icon
+      +button-large-icon($story-details-type-icon, left, $scale)
+
++story-details-dimensions
+
++small-screen
+  +story-details-dimensions(0.5)
+
+.story-details
+  .story-god i.icon
+    :background-image image-url($user-icon)
+
+  .story-hero i.icon
+    :background-image image-url($hero-icon)
+
+  .story-type i.icon
+    :background-image image-url($story-details-type-icon)

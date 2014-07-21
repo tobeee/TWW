@@ -1,0 +1,30 @@
+=create-new-hero-dimensions($scale: 1)
+  .create-new-hero
+    //:height round(93px * $scale)
+    :padding
+      :top round(24px * $scale)
+      :bottom round(20px * $scale)
+    :margin
+      :left round(20px * $scale)
+      :right round(20px * $scale)
+    :border
+      :top round(4px * $scale) solid $text-color
+      :bottom round(4px * $scale) solid $text-color
+    :font-size round(29px * $scale)
+
+    button
+      :margin-right round(80px * $scale)
+
++create-new-hero-dimensions
+
++small-screen
+  +create-new-hero-dimensions(0.5)
+
+.create-new-hero
+  :text-align center
+  :font-weight bold
+  :cursor pointer
+
+.hero-list
+  .hero
+    :cursor pointer

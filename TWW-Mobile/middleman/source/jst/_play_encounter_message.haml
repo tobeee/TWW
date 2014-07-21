@@ -1,0 +1,22 @@
+:plain
+  <div class="encounter">
+    <% _.tap(message.getEncounter(), function(encounter) { %>
+      <h3><%= encounter.name %></h3>
+
+      <div class="encounter-description">
+        <%= tww.h.simpleFormat(message.getEncounter().desc) %>
+      </div>
+
+      <% if (!_.isEmpty(encounter.objectives)) { %>
+        <%= tww.t.objectives_list({objectives: encounter.objectives}) %>
+      <% } %>
+
+      <% if (!_.isEmpty(encounter.items)) { %>
+        <%= tww.t.items_list({items: encounter.items}) %>
+      <% } %>
+
+      <% if (!_.isEmpty(encounter.cast)) { %>
+        <%= tww.t.cast_list({cast: encounter.cast}) %>
+      <% } %>
+    <% }); %>
+  </div>

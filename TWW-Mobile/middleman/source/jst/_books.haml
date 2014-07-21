@@ -1,0 +1,6 @@
+:plain
+  <% _.each(collection, function(story) { %>
+    <a class="book" href="#stories/<%= story.id %>">
+      <%= story.get('title') %>
+    </a>
+  <% }); %>

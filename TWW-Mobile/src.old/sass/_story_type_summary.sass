@@ -1,0 +1,19 @@
+=story-type-summary-dimensions($scale: 1)
+  .story-type-summary
+    .story-type-description
+      :margin-top round(40px * $scale)
+
+
++story-type-summary-dimensions
+
++small-screen
+  +story-type-summary-dimensions(0.5)
+
+.story-type-summary
+  .story-chapter-one
+    h2
+      :text-align left
+      :margin
+        :left 5%
+        :right 5%
+        :bottom 0.5em

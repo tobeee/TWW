@@ -1,0 +1,43 @@
+=notification-dimensions($scale: 1)
+  $-shadow-spread: round(20px * $scale)
+  $-shadow-color: rgba(black, 0.2)
+  :top round(33px * $scale)
+  +box-shadow($-shadow-color 0 0 $-shadow-spread)
+
+  &:before
+    :width round(50px * $scale)
+    :height round(50px * $scale)
+    :top round(-22px * $scale)
+    :right round(50px * $scale)
+    +border-radius(round(4px * $scale))
+    +box-shadow(white round(10px * $scale) 0, white 0 round(10px * $scale), $-shadow-color 0 0 $-shadow-spread)
+
+#tww-notifications
+  :z-index 9999
+  :position fixed
+  :left 0
+  :right 0
+  :width 100%
+
+  +notification-dimensions
+
+  +small-screen
+    +notification-dimensions(0.5)
+
+  &:before
+    :content ''
+    :display block
+    :position absolute
+    :background white
+    +background-size(cover)
+    +rotate(45deg)
+
+  .notification
+    &.notification-your-turn i.notification-icon
+      :background-image image-url($story-icon)
+
+    &.notification-accepted i.notification-icon
+      :background-image image-url($user-icon)
+
+#tww-notifications-list
+  :overflow auto

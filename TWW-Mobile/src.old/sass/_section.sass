@@ -1,0 +1,46 @@
+$section-header-height: 62px
+$section-header-font-size: 27px
+$section-header-padding-top: 25px
+$section-header-padding-left: 19px
+
+$section-header-buttons-right: 11px
+$section-header-buttons-top: 6px
+
+$section-header-button-margin-left: 18px
+
+=section-dimensions($scale: 1)
+  .section
+    .section-header
+      :height round($section-header-height * $scale)
+      :font-size round($section-header-font-size * $scale)
+      :padding
+        :top round($section-header-padding-top * $scale)
+        :left round($section-header-padding-left * $scale)
+      +background-size(auto, auto round($section-header-height * $scale))
+
+    .section-header-buttons
+      :right round($section-header-buttons-right * $scale)
+      :top round($section-header-buttons-top * $scale)
+
+      button.small-button
+        :margin-left round($section-header-button-margin-left * $scale)
+
++section-dimensions
+
+.section
+  .section-header
+    :font-weight 700
+    +background(linear-gradient(left, rgba(white, 0) 0%, rgba(white, 0.5) 50%, rgba(white, 0) 100%), image-url('section-header-bg.png'))
+    +box-sizing(border-box)
+    +box-shadow(rgba(black, 0.5) 0 1px 3px)
+    +clearfix
+
+  .section-header-buttons
+    :position absolute
+
+    button.small-button
+      :float right
+      :display block
+
++small-screen
+  +section-dimensions(0.5)

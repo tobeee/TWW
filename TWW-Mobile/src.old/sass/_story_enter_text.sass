@@ -1,0 +1,24 @@
+=story-enter-text-dimensions($scale: 1)
+  .story-enter-text
+    .story-enter-text-input
+      :padding 10px * $scale
+      :font-size 28px * $scale
+      +box-shadow(rgba(black, 0.2) 0 0 (10px * $scale) inset, white 0 1px)
+
++story-enter-text-dimensions
+
++small-screen
+  +story-enter-text-dimensions(0.5)
+
+.story-enter-text
+  :background image-url('book-page-bg.png')
+
+  .story-enter-text-input
+    :display block
+    :border none
+    :margin 0
+    :width 100%
+    :font-family $open-sans
+    :color $text-color
+    +box-sizing(border-box)
+    +box-shadow(rgba(black, 0.2) 0 0 10px inset, white 0 1px)

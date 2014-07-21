@@ -1,0 +1,5 @@
+:plain
+  <% _.each(tww.data.mapTiles, function(tile) { %>
+    <div class="med-tile" data-brush="<%= tile %>" style="background-image: url('<%= tww.helpers.tilePath(tile) %>');">
+    </div>
+  <% }); %>

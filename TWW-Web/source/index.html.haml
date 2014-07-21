@@ -1,0 +1,48 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %title The Written World
+    = stylesheet_link_tag "all"
+
+  %body
+    %header#header
+
+    #map-container
+      #map-viewport
+
+    #map-editor-toolbox.ui-window{style: 'display: none'}
+      #med-tabs.ui-tabs
+        #med-tab-tiles.ui-tab.active{'data-tab' => 'tiles'}
+        #med-tab-cast.ui-tab{'data-tab' => 'cast'}
+        #med-tab-items.ui-tab{'data-tab' => 'items'}
+      #med-body
+      #med-search
+        %input{type: 'search', placeholder: 'search'}
+        %input{type: 'button'}
+
+    %nav#main-menu
+      %a#mm-save
+        %span Save
+      %a#mm-fp
+        #force-points 3740
+        %span Force Points
+      %a#mm-build
+        %span Build
+      %a#mm-write
+        %span Write
+      %a#mm-play
+        %span Play
+
+    = javascript_include_tag "all"
+
+    - if development?
+      = javascript_include_tag "mocks"
+
+    -# Include JS templates
+    = jst_script_tags
+
+    :javascript
+      tww.data.mapTiles = #{map_tiles.to_json};
+      tww.initialize({});

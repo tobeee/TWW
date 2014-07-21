@@ -1,0 +1,123 @@
+$map-editor-tabs-height: 60px
+$map-editor-search-height: 32px
+
+#map-editor-toolbox
+  :position absolute
+  :left 20px
+  :bottom 100px
+  :width 295px
+  :height 354px
+  :background white
+  +border-top-radius(10px)
+  +box-shadow(rgba(black, 0.5) 0 0 5px)
+
+#med-tabs
+  :height $map-editor-tabs-height
+  :background #eee
+  +border-top-radius(10px)
+
+  .ui-tab
+    :float left
+    :width 97px
+    :height 60px
+    :background
+      :color #f9f9f9
+      :repeat no-repeat
+      :position center
+    :margin-left 2px
+
+    &:first-child
+      +border-top-left-radius(10px)
+      :margin-left 0
+
+    &:last-child
+      +border-top-right-radius(10px)
+
+    &.active
+      :background-color white
+
+#med-tab-tiles
+  :background-image image-url('map-editor/tiles.png')
+
+#med-tab-cast
+  :background-image image-url('map-editor/cast.png')
+
+#med-tab-items
+  :background-image image-url('map-editor/items.png')
+
+#med-body
+  :position absolute
+  :width 100%
+  :top $map-editor-tabs-height
+  :bottom $map-editor-search-height + 2px
+  :overflow auto
+
+#med-search
+  :position absolute
+  :bottom 0
+  :height $map-editor-search-height
+  :width 100%
+  :background yellow
+
+  input
+    :padding 0
+    :border none
+    :position absolute
+    :outline none
+
+    &[type=search]
+      :left 0
+      :width 239px
+      :height 29px
+      :text-align right
+      :font-style italic
+      :background-color #eeeded
+      :border-style inset
+      :border-right 2px solid #dedede
+      :border-top 3px solid #dedede
+      :border-left none
+      :border-bottom none
+      :color #232323
+
+    &[type=button]
+      :right 0
+      :width 54px
+      :height 32px
+      :background #f2f2f2 image-url('map-editor/search.png') no-repeat center
+
+#med-tiles
+  :padding 5px
+
+  .med-tile
+    :width 64px
+    :height 64px
+    :display inline-block
+    :cursor pointer
+    +background-size(cover)
+
+    &._selected
+      :background-color red
+
+#med-cast
+  :overflow hidden
+
+  .med-character, .med-cast-new
+    :float left
+    :width 85px
+    :height 100px
+    :margin 0 5px 5px 0
+
+  .med-character
+    :background yellow
+    
+    .med-char-edit
+      :cursor pointer
+
+  .med-cast-new
+    :background orange
+    :cursor pointer
+
+.med-char-drag
+  :width 50px
+  :height 75px
+  :background red

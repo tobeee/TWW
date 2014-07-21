@@ -1,0 +1,124 @@
+=page-dimensions($scale: 1)
+  $l:  'book-page-left-border.png'
+  $r:  'book-page-right-border.png'
+  $bl: 'book-page-bottom-left-corner.png'
+  $br: 'book-page-bottom-right-corner.png'
+  $b:  'book-page-bottom-border.png'
+  $bg: 'book-page-bg.png'
+
+  .page
+    :padding
+      :right round(20px * $scale)
+      :left round(20px * $scale)
+      :top round(48px * $scale)
+      :bottom round(50px * $scale)
+
+    &.book-left
+      :padding-left round(58px * $scale)
+      +background(linear-gradient(right, rgba(black, 0.1) 0%, rgba(black, 0) round(100px * $scale)), image-url($bl) left bottom no-repeat, image-url($b) left bottom repeat-x, image-url($l) left top repeat-y, image-url($bg))
+      +background-size(auto, round(image-width($bl) * $scale) round(image-height($bl) * $scale), round(image-width($b) * $scale) round(image-height($b) * $scale), round(image-width($l) * $scale) round(image-height($l) * $scale), round(image-width($bg) * $scale) round(image-height($bg) * $scale))
+
+    &.book-right
+      :padding-right round(58px * $scale)
+      +background(linear-gradient(left, rgba(black, 0.1) 0%, rgba(black, 0) round(100px * $scale)), image-url($br) right bottom no-repeat, image-url($b) right bottom repeat-x, image-url($r) right top repeat-y, image-url($bg))
+      +background-size(auto, round(image-width($br) * $scale) round(image-height($br) * $scale), round(image-width($b) * $scale) round(image-height($b) * $scale), round(image-width($r) * $scale) round(image-height($r) * $scale), round(image-width($bg) * $scale) round(image-height($bg) * $scale))
+
+    .page-actions
+      :margin-top round(88px * $scale)
+
+    h1
+      :font-size round(31px * $scale)
+
+      &.large-heading
+        :font-size round(36px * $scale)
+
+    h2
+      :font-size round(24px * $scale)
+
+    h3
+      :font-size round(22px * $scale)
+
+    header
+      h1
+        :border-bottom round(4px * $scale) solid $text-color
+
+      h2
+        :font-size round(30px * $scale)
+
+    hr
+      :height round(116px * $scale)
+      :line-height round(116px * $scale)
+      :font-size round(30px * $scale)
+
+    p
+      :font-size round(24px * $scale)
+
+    ul.bulleted-list
+      li
+        :font-size round(21px * $scale)
+
+        &:before
+          :left round(8px * $scale)
+
++page-dimensions
+
++small-screen
+  +page-dimensions(0.5)
+
+.page
+  &.plain
+    :background white !important
+
+  .page-actions
+    :text-align center
+
+  h1, h2, h3
+    :font-weight bold
+    :text-align center
+    :margin
+      :left 5%
+      :right 5%
+
+  header
+    h1
+      :padding-bottom 0.13em
+
+    h2
+      :font-family $gentium-book-basic
+      :font-weight normal
+      :font-style italic
+      :margin-top 0.2em
+      :text-align center
+
+  hr
+    :border none
+    :text-align center
+    :font-weight bold
+    :font-family $gentium-book-basic
+
+    &:before
+      :content "\25CA\00A0\25CA\00A0\25CA"
+
+  p
+    :text-align justify
+    :margin
+      :left 5%
+      :right 5%
+      :bottom 1em
+    :line-height 1em
+
+  ul.bulleted-list
+    li
+      :position relative
+      :margin
+        :left 5%
+        :right 5%
+      :font-family $gentium-book-basic
+      :font-style italic
+      :list-style none
+      :padding-left 1.5em
+
+      &:before
+        :content '-'
+        :position absolute
+        :top 0

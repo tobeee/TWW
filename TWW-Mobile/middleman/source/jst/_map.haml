@@ -1,0 +1,6 @@
+:plain
+  <div class="map-container">
+    <% map.each(function(tile, x, y) { %>
+      <div id="map-tile-<%= x %>-<%= y %>" class="map-tile <%= tile.get('visited') ? 'visited' : '' %>" style="left: <%= x * tww.game.views.Map.TILE_WIDTH %>px; top: <%= y * tww.game.views.Map.TILE_HEIGHT %>px; background-image: url('images/map-tiles/<%= tile.get('img') %>')"></div>
+    <% }); %>
+  </div>

@@ -1,0 +1,20 @@
+=book-cover-dimensions($scale: 1)
+  .book-cover
+    hr
+      :height round(3px * $scale)
+      :margin round(20px * $scale) round(6px * $scale)
+
++book-cover-dimensions
+
++small-screen
+  +book-cover-dimensions(0.5)
+
+.book-cover
+  :color $book-cover-fg-color
+  :background-color $book-cover-bg-color
+
+  hr
+    :background $book-cover-fg-color
+    :border none
+    :border-bottom 1px solid $book-cover-highlight-color
+    +box-shadow(#473D28 1px 1px 2px inset)

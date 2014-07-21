@@ -1,0 +1,29 @@
+=badge($scale: 1)
+  $-border-radius: round(20px * $scale) round(14px * $scale)
+  :font-size round(20px * $scale)
+  :font-family $open-sans
+  :font-weight normal
+  :line-height round(20px * $scale)
+  :padding
+    :top round(8px * $scale)
+    :right round(8px * $scale)
+    :left round(8px * $scale)
+    :bottom round(10px * $scale)
+  :border round(2px * $scale) solid white
+  :font-style normal
+  :font-weight 600
+  +border-top-right-radius($-border-radius)
+  +border-bottom-right-radius($-border-radius)
+  +border-top-left-radius($-border-radius)
+  +border-bottom-left-radius($-border-radius)
+  +box-shadow(rgba(black, 0.3) 0 0 round(4px * $scale))
+
+=badge-red($scale: 1)
+  +badge($scale)
+  +background(linear-gradient(#D45C45, #AF3224))
+  :color white
+
+=badge-yellow($scale: 1)
+  +badge($scale)
+  +background(linear-gradient(#FFDA59, #FFB830))
+  :color $text-color
