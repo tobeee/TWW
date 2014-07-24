@@ -41,13 +41,19 @@ through a browser to see the app.
 
 The Map Editor is the first part of the TWW web client. It's still missing a few key features, like an improved character drop functionality and better description editor. Once those have been completed, adding the message parser and game functionality from the mobile version would come close to the completed version we had in mind.
 
-
-How TWW works
+TWW Server
 ----------
+
+This is the part that completely needs to be rewritten. The server doesn't do much except store the data and act as a websockets server to send data to the clients. I've included a copy of the Schema inside the TWW-Server folder. This, coupled with the mock data inside TWW-Mobile should be enough to rebuild the server completely. 
+
+
+Note - l_histories,l_requests and lobbies are not needed for the game to function, they were used to manage the story joining lobbies. Stories, users, characters and maps are needed for a basic version of the game to work. The data is stored in JSON, which you can find dummy versions of in the TWW-Mobile directory
+
+I'll be happy to help if anyone decides to do this!
 
 Next steps
 ---------
-
+-  Finish up explanation of how the game should function
 -  Finish up map editor
 -  Add the actual game functionality to map editor
 -  Rewrite the server code
